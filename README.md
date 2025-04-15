@@ -19,6 +19,7 @@ improvements.
 
 # Authors
 David Kessler
+
 Brad Cline
 
 # Disclaimer
