@@ -19,6 +19,7 @@ improvements.
 
 # Authors
 David Kessler
+Brad Cline
 
 # Disclaimer
 By downloading this software, the user acknowledges that it is unsupported, not reviewed for security purposes, and that the user assumes all risk for running it.
