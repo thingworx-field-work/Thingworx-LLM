@@ -1,28 +1,28 @@
 # Overview
 
-This white paper focuses on a demo application that integrates ThingWorx with ChatGPT-4o. We explain the
-components of the application and how they collectively facilitate communication between ThingWorx and the
-LLM through an API. Ultimately natural language questions from the user are answered in a similar fashion.
-Although our example uses a specific LLM service, the application and concepts it illustrates can be easily
-adapted to work with other data stores and other LLMs. The demo data used by the application is stored in a
-ThingWorx Data Table, for the sake of easy importing. The process covers extracting data from the Data Table,
-preparing it, and creating prompts that let ThingWorx talk with the LLM to deliver useful, natural language answers.
-The methods outlined here are flexible. Even if your data comes from ThingWorx Value Streams, historians, or other
-databases, the overall approach remains the same. You simply extract the relevant data, add context, and feed it
-into the LLM. Likewise, if you choose a different LLM service, the main steps—API communication, data
-transformation, and response checking—will still apply with only minor changes.
-A specific context for using ThingWorx and LLMs is for Statistical Process Control (SPC). In many factories, SPC is
-used to track when processes go "out of control" over time. With this setup, you can ask questions like, “What were
-the out-of-control events for Machine 5 last month?” The system can then pull together historical and real-time
-SPC data to show when and where rules were violated. This helps teams quickly spot problems and make
-improvements.
+This best practice document focuses on a demo application that integrates ThingWorx with ChatGPT-4o. We explain the components of the application and how they collectively facilitate communication between ThingWorx and the LLM through an API. Ultimately natural language questions from the user are answered in a similar fashion. Although our example uses a specific LLM service, the application and concepts it illustrates can be easily adapted to work with other data stores and other LLMs. 
+
+The demo data used by the application is stored in aThingWorx Data Table, for the sake of easy importing. The process covers extracting data from the Data Table, preparing it, and creating prompts that let ThingWorx talk with the LLM to deliver useful, natural language answers. The methods outlined here are flexible. Even if your data comes from ThingWorx Value Streams, historians, or other databases, the overall approach remains the same. You simply extract the relevant data, add context, and feed it into the LLM. Likewise, if you choose a different LLM service, the main steps—API communication, data transformation, and response checking—will still apply with only minor changes. 
+
+A specific context for using ThingWorx and LLMs is for Statistical Process Control (SPC). In many factories, SPC is used to track when processes go "out of control" over time. With this setup, you can ask questions like, “What were the out-of-control events for Machine 5 last month?” The system can then pull together historical and real-time SPC data to show when and where rules were violated. This helps teams quickly spot problems and make improvements.
 
 # Authors
 David Kessler
-
 Brad Cline
 
 # Disclaimer
+Users are solely responsible for the use of and reliance on the demo application and the accompanying document which integrates ThingWorx with ChatGPT-4o, a generative Artificial Intelligence (AI) tool. The project file for the demo application is provided for demonstration purposes only and should not be used in production without thorough testing.
+
+Users acknowledge that PTC Inc. owns the intellectual property rights to this demo application. A limited, free, non-exclusive license is granted to users for demonstration and educational purposes only.
+
+Due to the inherent unpredictability of generative AI tools, users further acknowledge that generated output may be inaccurate or harmful, and that users must apply human judgment and consider associated risks when evaluating generated output.
+
+PTC disclaims liability for any losses or damages arising from the use of the demo application and this document. Users are responsible for outcomes from using the demo and document, and assume responsibility for complying with all relevant laws, including but not limited to data privacy, security, and the EU AI Act.
+
+***
+
+Your license to commercial versions of PTC products may not include all APIs needed to connect to AI tools and may require additional licensing.
+
 By downloading this software, the user acknowledges that it is unsupported, not reviewed for security purposes, and that the user assumes all risk for running it.
 
 Users accept all risk whatsoever regarding the security of the code they download.
