@@ -1,0 +1,2022 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Entities build="b1432" majorVersion="9" minorVersion="3" modelPersistenceProviderPackage="PostgresPersistenceProviderPackage" revision="7" schemaVersion="1134" universal=""><StyleDefinitions/><Networks/><PersistenceProviderPackages/><Mashups><Mashup aspect.isFlex="true" aspect.isResponsive="true" aspect.mashupType="mashup" columns="0.0" description="Simple Mashup used to ask questions of the data within the &quot;PTCDTS.TWXLLM.ExampleData_DT&quot; Data Table. " documentationContent="" homeMashup="" lastModifiedDate="2025-04-03T17:43:54.115Z" name="PTCDTS.TWXLLM.DataQuery_MU" projectName="PTCDTS.TWXLLM" rows="0.0" tags=""><Owner name="Administrator" type="User"/><avatar/><DesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></DesignTimePermissions><RunTimePermissions/><VisibilityPermissions><Visibility/></VisibilityPermissions><ConfigurationTableDefinitions/><ConfigurationTables><ConfigurationTable dataShapeName="" description="Mashup Mobile Settings" isHidden="true" isMultiRow="false" name="MobileSettings" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.defaultValue="false" aspect.friendlyName="Disable Zoom" baseType="BOOLEAN" description="Disables zooming in and out within the mashup" name="disableZoom" ordinal="0"/><FieldDefinition aspect.defaultValue="true" aspect.friendlyName="Full Screen Mode" baseType="BOOLEAN" description="Open the mashup in full screen mode" name="fullScreenMode" ordinal="0"/><FieldDefinition aspect.friendlyName="Height" baseType="STRING" description="The height of the mashup page" name="height" ordinal="0"/><FieldDefinition aspect.defaultValue="device-height" aspect.friendlyName="Height Type" baseType="STRING" description="Use the height of the device display, or a custom height (in px)" name="heightType" ordinal="0"/><FieldDefinition aspect.defaultValue="1.0" aspect.friendlyName="Initial Scale" baseType="NUMBER" description="The initial zoom scale when the mashup is loaded for the first time" name="initialScale" ordinal="0"/><FieldDefinition aspect.friendlyName="Shortcut Icon Title" baseType="STRING" description="A title for the mashup shortcut on the iOS home screen" name="iosShortcutIconTitle" ordinal="0"/><FieldDefinition aspect.defaultValue="black-translucent" aspect.friendlyName="Status Bar Appearance" baseType="STRING" description="The style of the iOS status bar" name="iosStatusBarAppearance" ordinal="0"/><FieldDefinition aspect.defaultValue="10.0" aspect.friendlyName="Maximum Scale" baseType="NUMBER" description="The maximum scale that users can zoom out to" name="maximumScale" ordinal="0"/><FieldDefinition aspect.defaultValue="0.1" aspect.friendlyName="Minimum Scale" baseType="NUMBER" description="The minimum scale that users can zoom out to" name="minimumScale" ordinal="0"/><FieldDefinition aspect.friendlyName="Width" baseType="STRING" description="The width of the mashup page" name="width" ordinal="0"/><FieldDefinition aspect.defaultValue="device-width" aspect.friendlyName="Width Type" baseType="STRING" description="Use the width of the device display, or a custom width (in px)" name="widthType" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><disableZoom>false</disableZoom><fullScreenMode>true</fullScreenMode><height><![CDATA[device-height]]></height><heightType><![CDATA[device-height]]></heightType><initialScale>1.0</initialScale><iosShortcutIconTitle/><iosStatusBarAppearance><![CDATA[black-translucent]]></iosStatusBarAppearance><maximumScale>10.0</maximumScale><minimumScale>0.1</minimumScale><width><![CDATA[device-width]]></width><widthType><![CDATA[device-width]]></widthType></Row></Rows></ConfigurationTable></ConfigurationTables><ParameterDefinitions/><Things/><ThingShapes/><ThingTemplates/><mashupContent><![CDATA[{
+  "CustomMashupCss" : "",
+  "Data" : {
+    "Session" : {
+      "DataName" : "Session",
+      "EntityName" : "",
+      "EntityType" : "Session",
+      "Id" : "session",
+      "Services" : [ {
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "Id" : "SessionInterface",
+        "Name" : "GetGlobalSessionValues",
+        "Parameters" : { },
+        "RefreshInterval" : 0,
+        "Target" : "GetGlobalSessionValues"
+      } ]
+    },
+    "Things_PTCDTS.TWXLLM.ExampleData_DT" : {
+      "DataName" : "Things_PTCDTS.TWXLLM.ExampleData_DT",
+      "EntityName" : "PTCDTS.TWXLLM.ExampleData_DT",
+      "EntityType" : "Things",
+      "Id" : "e722fab6-1d30-491c-9900-f1b3b1ad8bb8",
+      "RefreshInterval" : 0,
+      "Services" : [ {
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "Id" : "0bbe8e85-2550-48e6-a6da-7cd7722f2672",
+        "Name" : "GetDataStatus",
+        "Parameters" : { },
+        "RefreshInterval" : 0,
+        "Target" : "GetDataStatus"
+      }, {
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "Id" : "2d17c65f-5085-4bc9-875f-5e098ef23743",
+        "Name" : "GenerateRandomDemoData",
+        "Parameters" : { },
+        "RefreshInterval" : 0,
+        "Target" : "GenerateRandomDemoData"
+      } ]
+    },
+    "Things_PTCDTS.TWXLLM.Manager" : {
+      "DataName" : "Things_PTCDTS.TWXLLM.Manager",
+      "EntityName" : "PTCDTS.TWXLLM.Manager",
+      "EntityType" : "Things",
+      "Id" : "852f029d-fb64-4eb1-9eba-8d91aacb60bb",
+      "RefreshInterval" : 0,
+      "Services" : [ {
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "Id" : "a3a35fff-d140-4e2d-a584-691314436b21",
+        "Name" : "GetExampleQuestion",
+        "Parameters" : { },
+        "RefreshInterval" : 0,
+        "Target" : "GetExampleQuestion"
+      }, {
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "Id" : "eaa5b881-3a43-4633-a5b7-b632b03cccc1",
+        "Name" : "ProcessQuestion",
+        "Parameters" : { },
+        "RefreshInterval" : 0,
+        "Target" : "ProcessQuestion"
+      } ]
+    },
+    "UserExtensions" : {
+      "DataName" : "UserExtensions",
+      "EntityName" : "",
+      "EntityType" : "UserExtensions",
+      "Id" : "UserExtensions",
+      "Services" : [ {
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "Id" : "UserExtensionInterface",
+        "Name" : "GetCurrentUserExtensionProperties",
+        "Parameters" : { },
+        "RefreshInterval" : 0,
+        "Target" : "GetCurrentUserExtensionProperties"
+      } ]
+    }
+  },
+  "DataBindings" : [ {
+    "Id" : "21beb518-9a5d-4238-8298-26aa16e5b8bf",
+    "PropertyMaps" : [ {
+      "SourceProperty" : "",
+      "SourcePropertyBaseType" : "INFOTABLE",
+      "SourcePropertyType" : "InfoTable",
+      "TargetProperty" : "Data",
+      "TargetPropertyBaseType" : "INFOTABLE",
+      "TargetPropertyType" : "property"
+    } ],
+    "SourceArea" : "Data",
+    "SourceDetails" : "AllData",
+    "SourceId" : "GetExampleQuestion",
+    "SourceSection" : "Things_PTCDTS.TWXLLM.Manager",
+    "TargetArea" : "UI",
+    "TargetId" : "ptcsdropdown-15",
+    "TargetSection" : ""
+  }, {
+    "Id" : "1bf6ea89-c3cf-444b-8fa6-a147e2316eac",
+    "PropertyMaps" : [ {
+      "SourceProperty" : "question",
+      "SourcePropertyBaseType" : "STRING",
+      "SourcePropertyType" : "Field",
+      "TargetProperty" : "Text",
+      "TargetPropertyBaseType" : "STRING",
+      "TargetPropertyType" : "property"
+    } ],
+    "SourceArea" : "Data",
+    "SourceDetails" : "SelectedRows",
+    "SourceId" : "GetExampleQuestion",
+    "SourceSection" : "Things_PTCDTS.TWXLLM.Manager",
+    "TargetArea" : "UI",
+    "TargetId" : "ptcstextarea-10",
+    "TargetSection" : ""
+  }, {
+    "Id" : "407e60fa-4a44-4870-adb2-75224074bc2e",
+    "PropertyMaps" : [ {
+      "SourceProperty" : "Text",
+      "SourcePropertyBaseType" : "STRING",
+      "SourcePropertyType" : "property",
+      "TargetProperty" : "userQuestion",
+      "TargetPropertyBaseType" : "STRING",
+      "TargetPropertyType" : "Parameter"
+    } ],
+    "SourceArea" : "UI",
+    "SourceId" : "ptcstextarea-10",
+    "SourceSection" : "",
+    "TargetArea" : "Data",
+    "TargetId" : "ProcessQuestion",
+    "TargetSection" : "Things_PTCDTS.TWXLLM.Manager"
+  }, {
+    "Id" : "3b5a4f16-2f50-45a0-98e7-364bc9d61dc6",
+    "PropertyMaps" : [ {
+      "SourceProperty" : "result",
+      "SourcePropertyBaseType" : "STRING",
+      "SourcePropertyType" : "Field",
+      "TargetProperty" : "Text",
+      "TargetPropertyBaseType" : "STRING",
+      "TargetPropertyType" : "property"
+    } ],
+    "SourceArea" : "Data",
+    "SourceDetails" : "AllData",
+    "SourceId" : "ProcessQuestion",
+    "SourceSection" : "Things_PTCDTS.TWXLLM.Manager",
+    "TargetArea" : "UI",
+    "TargetId" : "ptcstextarea-13",
+    "TargetSection" : ""
+  }, {
+    "Id" : "95d59f91-4343-4ef7-aea5-8373359919f5",
+    "PropertyMaps" : [ {
+      "SourceProperty" : "result",
+      "SourcePropertyBaseType" : "STRING",
+      "SourcePropertyType" : "Field",
+      "TargetProperty" : "Text",
+      "TargetPropertyBaseType" : "STRING",
+      "TargetPropertyType" : "property"
+    } ],
+    "SourceArea" : "Data",
+    "SourceDetails" : "AllData",
+    "SourceId" : "GetDataStatus",
+    "SourceSection" : "Things_PTCDTS.TWXLLM.ExampleData_DT",
+    "TargetArea" : "UI",
+    "TargetId" : "ptcstextfield-36",
+    "TargetSection" : ""
+  } ],
+  "DesignTimePermissions" : { },
+  "Events" : [ {
+    "EventHandlerArea" : "Data",
+    "EventHandlerId" : "Things_PTCDTS.TWXLLM.Manager",
+    "EventHandlerService" : "GetExampleQuestion",
+    "EventTriggerArea" : "Mashup",
+    "EventTriggerEvent" : "Loaded",
+    "EventTriggerId" : "mashup-root",
+    "EventTriggerSection" : "",
+    "Id" : "50e60bad-7e0f-4011-9ecb-6d9d09d4c305"
+  }, {
+    "EventHandlerArea" : "Data",
+    "EventHandlerId" : "Things_PTCDTS.TWXLLM.Manager",
+    "EventHandlerService" : "ProcessQuestion",
+    "EventTriggerArea" : "UI",
+    "EventTriggerEvent" : "Clicked",
+    "EventTriggerId" : "ptcsbutton-17",
+    "EventTriggerSection" : "",
+    "Id" : "256eff64-0936-4476-abe8-1efd03fbee10"
+  }, {
+    "EventHandlerArea" : "UI",
+    "EventHandlerId" : "ptcstextarea-13",
+    "EventHandlerService" : "ResetToDefaultValue",
+    "EventTriggerArea" : "UI",
+    "EventTriggerEvent" : "Clicked",
+    "EventTriggerId" : "ptcsbutton-19",
+    "EventTriggerSection" : "",
+    "Id" : "a57a8c7a-eac3-4ee2-93e4-240b00a4995b"
+  }, {
+    "EventHandlerArea" : "UI",
+    "EventHandlerId" : "ptcstextarea-10",
+    "EventHandlerService" : "ResetToDefaultValue",
+    "EventTriggerArea" : "UI",
+    "EventTriggerEvent" : "Clicked",
+    "EventTriggerId" : "ptcsbutton-19",
+    "EventTriggerSection" : "",
+    "Id" : "31cae391-3d09-4d0a-985e-ae04e5e93f29"
+  }, {
+    "EventHandlerArea" : "UI",
+    "EventHandlerId" : "ptcsdropdown-15",
+    "EventHandlerService" : "ResetToDefaultValue",
+    "EventTriggerArea" : "UI",
+    "EventTriggerEvent" : "Clicked",
+    "EventTriggerId" : "ptcsbutton-19",
+    "EventTriggerSection" : "",
+    "Id" : "717f3034-87cf-44b6-8e8a-1aab3e08e12a"
+  }, {
+    "EventHandlerArea" : "Data",
+    "EventHandlerId" : "Things_PTCDTS.TWXLLM.ExampleData_DT",
+    "EventHandlerService" : "GetDataStatus",
+    "EventTriggerArea" : "Mashup",
+    "EventTriggerEvent" : "Loaded",
+    "EventTriggerId" : "mashup-root",
+    "EventTriggerSection" : "",
+    "Id" : "06fdfb7c-61b9-4a1d-b314-3f2dc2708307"
+  }, {
+    "EventHandlerArea" : "Data",
+    "EventHandlerId" : "Things_PTCDTS.TWXLLM.ExampleData_DT",
+    "EventHandlerService" : "GenerateRandomDemoData",
+    "EventTriggerArea" : "UI",
+    "EventTriggerEvent" : "Clicked",
+    "EventTriggerId" : "ptcsbutton-35",
+    "EventTriggerSection" : "",
+    "Id" : "fcf4ba04-5e0e-4aa9-8bbf-5db7165e9c2d"
+  }, {
+    "EventHandlerArea" : "Data",
+    "EventHandlerId" : "Things_PTCDTS.TWXLLM.ExampleData_DT",
+    "EventHandlerService" : "GetDataStatus",
+    "EventTriggerArea" : "UI",
+    "EventTriggerEvent" : "Refresh",
+    "EventTriggerId" : "autorefreshfunction-37",
+    "EventTriggerSection" : "",
+    "Id" : "105ec204-6eed-471b-8169-c62ce4cd8054"
+  }, {
+    "EventHandlerArea" : "Data",
+    "EventHandlerId" : "Things_PTCDTS.TWXLLM.ExampleData_DT",
+    "EventHandlerService" : "GetDataStatus",
+    "EventTriggerArea" : "UI",
+    "EventTriggerEvent" : "Clicked",
+    "EventTriggerId" : "ptcsbutton-35",
+    "EventTriggerSection" : "",
+    "Id" : "211c1382-a286-4f5b-98dc-9ca77febba91"
+  } ],
+  "Reminders" : [ ],
+  "RunTimePermissions" : { },
+  "UI" : {
+    "Properties" : {
+      "AddToDashboardButton" : "SimplePlus",
+      "AddToDashboardButtonStyle" : "DefaultAddToDashboardButtonStyle",
+      "Area" : "Mashup",
+      "BGImage" : "",
+      "BGImageRepeat" : "no-repeat",
+      "BGImageSize" : "auto",
+      "Columns" : 0,
+      "ConfigureGadgetButton" : "SimpleGear",
+      "ConfigureGadgetButtonStyle" : "DefaultConfigureGadgetButtonStyle",
+      "DisplayName" : "Mashup",
+      "EnableParameterEditing" : false,
+      "Height" : 618,
+      "Id" : "mashup-root",
+      "IgnoreWarningsInViewMashup" : false,
+      "IsPrintLayout" : false,
+      "Left" : 0,
+      "Margin" : "5",
+      "MashupResolution" : "FHD 1920x1080",
+      "MashupToEditGadget" : "DefaultMashupToEditGadget",
+      "MinHeight" : 0,
+      "MinWidth" : 0,
+      "ResponsiveLayout" : true,
+      "Rows" : 0,
+      "ShowDataLoading" : true,
+      "Style" : "DefaultMashupStyle",
+      "StyleProperties" : {
+        "data" : {
+          "flexcontainer-11" : {
+            "parts" : {
+              "$" : {
+                "$" : {
+                  "background" : "#ffffff",
+                  "border-color" : "inherit",
+                  "border-radius" : "initial",
+                  "border-style" : "none",
+                  "border-width" : "0px",
+                  "padding-bottom" : "",
+                  "padding-left" : "",
+                  "padding-right" : "",
+                  "padding-top" : ""
+                }
+              }
+            },
+            "widget" : "flex-container"
+          },
+          "flexcontainer-14" : {
+            "parts" : {
+              "$" : {
+                "$" : {
+                  "background" : "#ffffff",
+                  "border-color" : "inherit",
+                  "border-radius" : "initial",
+                  "border-style" : "none",
+                  "border-width" : "0px",
+                  "padding-bottom" : "",
+                  "padding-left" : "",
+                  "padding-right" : "",
+                  "padding-top" : ""
+                }
+              }
+            },
+            "widget" : "flex-container"
+          },
+          "flexcontainer-16" : {
+            "parts" : {
+              "$" : {
+                "$" : {
+                  "background" : "#ffffff",
+                  "border-color" : "inherit",
+                  "border-radius" : "initial",
+                  "border-style" : "none",
+                  "border-width" : "0px",
+                  "padding-bottom" : "",
+                  "padding-left" : "",
+                  "padding-right" : "",
+                  "padding-top" : ""
+                }
+              }
+            },
+            "widget" : "flex-container"
+          },
+          "flexcontainer-18" : {
+            "parts" : {
+              "$" : {
+                "$" : {
+                  "background" : "#ffffff",
+                  "border-color" : "inherit",
+                  "border-radius" : "initial",
+                  "border-style" : "none",
+                  "border-width" : "0px",
+                  "padding-bottom" : "",
+                  "padding-left" : "",
+                  "padding-right" : "",
+                  "padding-top" : ""
+                }
+              }
+            },
+            "widget" : "flex-container"
+          },
+          "flexcontainer-2" : {
+            "parts" : {
+              "$" : {
+                "$" : {
+                  "background" : "#ffffff",
+                  "border-color" : "inherit",
+                  "border-radius" : "initial",
+                  "border-style" : "none",
+                  "border-width" : "0px",
+                  "padding-bottom" : "",
+                  "padding-left" : "",
+                  "padding-right" : "",
+                  "padding-top" : ""
+                }
+              }
+            },
+            "widget" : "flex-container"
+          },
+          "flexcontainer-28" : {
+            "parts" : {
+              "$" : {
+                "$" : {
+                  "background" : "#ffffff",
+                  "border-color" : "inherit",
+                  "border-radius" : "initial",
+                  "border-style" : "none",
+                  "border-width" : "0px",
+                  "padding-bottom" : "",
+                  "padding-left" : "",
+                  "padding-right" : "",
+                  "padding-top" : ""
+                }
+              }
+            },
+            "widget" : "flex-container"
+          },
+          "flexcontainer-29" : {
+            "parts" : {
+              "$" : {
+                "$" : {
+                  "background" : "#ffffff",
+                  "border-color" : "inherit",
+                  "border-radius" : "initial",
+                  "border-style" : "none",
+                  "border-width" : "0px",
+                  "padding-bottom" : "",
+                  "padding-left" : "",
+                  "padding-right" : "",
+                  "padding-top" : ""
+                }
+              }
+            },
+            "widget" : "flex-container"
+          },
+          "flexcontainer-3" : {
+            "parts" : {
+              "$" : {
+                "$" : {
+                  "background" : "#ffffff",
+                  "border-color" : "inherit",
+                  "border-radius" : "initial",
+                  "border-style" : "none",
+                  "border-width" : "0px",
+                  "padding-bottom" : "",
+                  "padding-left" : "",
+                  "padding-right" : "",
+                  "padding-top" : ""
+                }
+              }
+            },
+            "widget" : "flex-container"
+          },
+          "flexcontainer-30" : {
+            "parts" : {
+              "$" : {
+                "$" : {
+                  "background" : "#ffffff",
+                  "border-color" : "inherit",
+                  "border-radius" : "initial",
+                  "border-style" : "none",
+                  "border-width" : "0px",
+                  "padding-bottom" : "",
+                  "padding-left" : "",
+                  "padding-right" : "",
+                  "padding-top" : ""
+                }
+              }
+            },
+            "widget" : "flex-container"
+          },
+          "flexcontainer-31" : {
+            "parts" : {
+              "$" : {
+                "$" : {
+                  "background" : "#ffffff",
+                  "border-color" : "inherit",
+                  "border-radius" : "initial",
+                  "border-style" : "none",
+                  "border-width" : "0px",
+                  "padding-bottom" : "",
+                  "padding-left" : "",
+                  "padding-right" : "",
+                  "padding-top" : ""
+                }
+              }
+            },
+            "widget" : "flex-container"
+          },
+          "flexcontainer-32" : {
+            "parts" : {
+              "$" : {
+                "$" : {
+                  "background" : "#ffffff",
+                  "border-color" : "inherit",
+                  "border-radius" : "initial",
+                  "border-style" : "none",
+                  "border-width" : "0px",
+                  "padding-bottom" : "",
+                  "padding-left" : "",
+                  "padding-right" : "",
+                  "padding-top" : ""
+                }
+              }
+            },
+            "widget" : "flex-container"
+          },
+          "flexcontainer-4" : {
+            "parts" : {
+              "$" : {
+                "$" : {
+                  "background" : "#ffffff",
+                  "border-color" : "inherit",
+                  "border-radius" : "initial",
+                  "border-style" : "none",
+                  "border-width" : "0px",
+                  "padding-bottom" : "",
+                  "padding-left" : "",
+                  "padding-right" : "",
+                  "padding-top" : ""
+                }
+              }
+            },
+            "widget" : "flex-container"
+          },
+          "flexcontainer-5" : {
+            "parts" : {
+              "$" : {
+                "$" : {
+                  "background" : "#ffffff",
+                  "border-color" : "inherit",
+                  "border-radius" : "initial",
+                  "border-style" : "none",
+                  "border-width" : "0px",
+                  "padding-bottom" : "",
+                  "padding-left" : "",
+                  "padding-right" : "",
+                  "padding-top" : ""
+                }
+              }
+            },
+            "widget" : "flex-container"
+          },
+          "flexcontainer-6" : {
+            "parts" : {
+              "$" : {
+                "$" : {
+                  "background" : "#ffffff",
+                  "border-color" : "inherit",
+                  "border-radius" : "initial",
+                  "border-style" : "none",
+                  "border-width" : "0px",
+                  "padding-bottom" : "",
+                  "padding-left" : "",
+                  "padding-right" : "",
+                  "padding-top" : ""
+                }
+              }
+            },
+            "widget" : "flex-container"
+          },
+          "flexcontainer-7" : {
+            "parts" : {
+              "$" : {
+                "$" : {
+                  "background" : "#ffffff",
+                  "border-color" : "inherit",
+                  "border-radius" : "initial",
+                  "border-style" : "none",
+                  "border-width" : "0px",
+                  "padding-bottom" : "",
+                  "padding-left" : "",
+                  "padding-right" : "",
+                  "padding-top" : ""
+                }
+              }
+            },
+            "widget" : "flex-container"
+          },
+          "flexcontainer-8" : {
+            "parts" : {
+              "$" : {
+                "$" : {
+                  "background" : "#ffffff",
+                  "border-color" : "inherit",
+                  "border-radius" : "initial",
+                  "border-style" : "none",
+                  "border-width" : "0px",
+                  "padding-bottom" : "",
+                  "padding-left" : "",
+                  "padding-right" : "",
+                  "padding-top" : ""
+                }
+              }
+            },
+            "widget" : "flex-container"
+          },
+          "flexcontainer-9" : {
+            "parts" : {
+              "$" : {
+                "$" : {
+                  "background" : "#ffffff",
+                  "border-color" : "inherit",
+                  "border-radius" : "initial",
+                  "border-style" : "none",
+                  "border-width" : "0px",
+                  "padding-bottom" : "",
+                  "padding-left" : "",
+                  "padding-right" : "",
+                  "padding-top" : ""
+                }
+              }
+            },
+            "widget" : "flex-container"
+          },
+          "ptcsbutton-17" : {
+            "parts" : {
+              "$" : {
+                "$" : {
+                  "background" : "#5BB73B",
+                  "border-color" : "#5BB73B",
+                  "border-style" : "none"
+                },
+                "hover" : {
+                  "background" : "rgba(71,158,51,1)",
+                  "border-color" : "rgba(71,158,51,1)"
+                },
+                "pressed" : {
+                  "background" : "rgba(54,119,39,1)",
+                  "border-color" : "rgba(54,119,39,1)"
+                }
+              }
+            },
+            "widget" : "ptcs-button"
+          },
+          "ptcsbutton-19" : {
+            "parts" : {
+              "$" : {
+                "$" : {
+                  "background" : "rgba(163,163,163,1)",
+                  "border-color" : "rgba(163,163,163,1)"
+                },
+                "hover" : {
+                  "background" : "rgba(143,143,143,1)",
+                  "border-color" : "rgba(143,143,143,1)"
+                },
+                "pressed" : {
+                  "background" : "rgba(132,132,132,1)",
+                  "border-color" : "rgba(132,132,132,1)",
+                  "border-style" : "none"
+                }
+              }
+            },
+            "widget" : "ptcs-button"
+          },
+          "ptcsbutton-21" : {
+            "parts" : {
+              "$" : {
+                "$" : {
+                  "background" : "rgba(222,222,222,1)",
+                  "border-color" : "rgba(222,222,222,1)"
+                }
+              }
+            },
+            "widget" : "ptcs-button"
+          },
+          "ptcsbutton-35" : {
+            "parts" : {
+              "$" : {
+                "$" : {
+                  "background" : "rgba(163,163,163,1)",
+                  "border-color" : "rgba(163,163,163,1)"
+                },
+                "hover" : {
+                  "background" : "rgba(143,143,143,1)",
+                  "border-color" : "rgba(143,143,143,1)"
+                },
+                "pressed" : {
+                  "background" : "rgba(132,132,132,1)",
+                  "border-color" : "rgba(132,132,132,1)",
+                  "border-style" : "none"
+                }
+              }
+            },
+            "widget" : "ptcs-button"
+          },
+          "ptcslabel-12" : {
+            "parts" : {
+              "$" : {
+                "$" : {
+                  "color" : "rgba(255,255,255,1)",
+                  "font-size" : "16px",
+                  "font-weight" : "700"
+                }
+              }
+            },
+            "widget" : "ptcs-label"
+          }
+        },
+        "meta" : {
+          "type" : "WidgetStyler",
+          "version" : "1.0"
+        }
+      },
+      "StyleTheme" : "PTC Convergence Theme",
+      "Title" : "",
+      "TitleBar" : false,
+      "TitleBarStyle" : "DefaultTitleBarStyle",
+      "TitleBarText" : "Gadget Title Here",
+      "Top" : 0,
+      "Type" : "mashup",
+      "UseMasterTheme" : false,
+      "UseTheme" : false,
+      "UseThemeForHybrids" : false,
+      "Visible" : true,
+      "Width" : 1024,
+      "Z-index" : 10,
+      "__TypeDisplayName" : "Mashup",
+      "id_index" : 37,
+      "secureExpressionsOnly" : true,
+      "supportsAutoResize" : true
+    },
+    "Widgets" : [ {
+      "Properties" : {
+        "Area" : "UI",
+        "CollapseTabIcon" : "",
+        "DisplayName" : "container-2",
+        "EnableContainerUnload" : false,
+        "EnableExpandCollapse" : false,
+        "ExpandCollapseTabLocation" : "inside",
+        "ExpandTabIcon" : "",
+        "Expanded" : true,
+        "Id" : "flexcontainer-2",
+        "LastContainer" : true,
+        "LazyLoading" : false,
+        "Left" : 0,
+        "Margin" : "",
+        "Overlay" : false,
+        "ResponsiveLayout" : true,
+        "ShowDataLoading" : true,
+        "ShowExpandCollapseTab" : false,
+        "SourceURL" : "",
+        "Style" : "DefaultContainerStyle",
+        "StyleProperties" : { },
+        "Top" : 0,
+        "Type" : "flexcontainer",
+        "UseTheme" : true,
+        "Visible" : true,
+        "Z-index" : 10,
+        "__TypeDisplayName" : "Responsive Container",
+        "align-content" : "flex-start",
+        "align-items" : "flex-start",
+        "flex-basis" : "auto",
+        "flex-direction" : "row",
+        "flex-grow" : 1,
+        "flex-max-height" : "",
+        "flex-max-width" : "",
+        "flex-min-height" : "",
+        "flex-min-width" : "",
+        "flex-shrink" : 1,
+        "flex-size" : "default",
+        "flex-wrap" : "nowrap",
+        "iconClass" : "widgets-flexcontainer",
+        "justify-content" : "flex-start",
+        "positioning" : "responsive",
+        "userCannotRemove" : true
+      },
+      "Widgets" : [ {
+        "Properties" : {
+          "Area" : "UI",
+          "CollapseTabIcon" : "",
+          "DisplayName" : "container-3",
+          "EnableContainerUnload" : false,
+          "EnableExpandCollapse" : false,
+          "ExpandCollapseTabLocation" : "inside",
+          "ExpandTabIcon" : "",
+          "Expanded" : true,
+          "Id" : "flexcontainer-3",
+          "LastContainer" : false,
+          "LazyLoading" : false,
+          "Margin" : "",
+          "Overlay" : false,
+          "ResponsiveLayout" : false,
+          "ShowDataLoading" : true,
+          "ShowExpandCollapseTab" : false,
+          "SourceURL" : "",
+          "Style" : "DefaultContainerStyle",
+          "StyleProperties" : { },
+          "Type" : "flexcontainer",
+          "UseTheme" : true,
+          "Visible" : true,
+          "Z-index" : 10,
+          "__TypeDisplayName" : "Responsive Container",
+          "align-content" : "flex-start",
+          "align-items" : "flex-start",
+          "flex-basis" : "auto",
+          "flex-direction" : "row",
+          "flex-grow" : 1,
+          "flex-max-height" : "",
+          "flex-max-width" : "200px",
+          "flex-min-height" : "",
+          "flex-min-width" : "200px",
+          "flex-shrink" : 1,
+          "flex-size" : "fixed",
+          "flex-wrap" : "nowrap",
+          "iconClass" : "widgets-flexcontainer-fixed",
+          "isLocked" : false,
+          "justify-content" : "flex-start",
+          "positioning" : "responsive",
+          "userCannotRemove" : false
+        },
+        "Widgets" : [ ]
+      }, {
+        "Properties" : {
+          "Area" : "UI",
+          "CollapseTabIcon" : "",
+          "DisplayName" : "container-29",
+          "EnableContainerUnload" : false,
+          "EnableExpandCollapse" : false,
+          "ExpandCollapseTabLocation" : "inside",
+          "ExpandTabIcon" : "",
+          "Expanded" : true,
+          "Id" : "flexcontainer-29",
+          "LastContainer" : false,
+          "LazyLoading" : false,
+          "Margin" : "",
+          "Overlay" : false,
+          "ResponsiveLayout" : true,
+          "ShowDataLoading" : true,
+          "ShowExpandCollapseTab" : false,
+          "SourceURL" : "",
+          "Style" : "DefaultContainerStyle",
+          "StyleProperties" : { },
+          "Type" : "flexcontainer",
+          "UseTheme" : true,
+          "Visible" : true,
+          "Z-index" : 10,
+          "__TypeDisplayName" : "Responsive Container",
+          "align-content" : "flex-start",
+          "align-items" : "flex-start",
+          "flex-basis" : "auto",
+          "flex-direction" : "row",
+          "flex-grow" : 1,
+          "flex-max-height" : "",
+          "flex-max-width" : "",
+          "flex-min-height" : "",
+          "flex-min-width" : "",
+          "flex-shrink" : 1,
+          "flex-size" : "default",
+          "flex-wrap" : "nowrap",
+          "iconClass" : "widgets-flexcontainer",
+          "isLocked" : false,
+          "justify-content" : "flex-start",
+          "positioning" : "responsive",
+          "userCannotRemove" : false
+        },
+        "Widgets" : [ ]
+      }, {
+        "Properties" : {
+          "Area" : "UI",
+          "CollapseTabIcon" : "",
+          "DisplayName" : "container-4",
+          "EnableContainerUnload" : false,
+          "EnableExpandCollapse" : false,
+          "ExpandCollapseTabLocation" : "inside",
+          "ExpandTabIcon" : "",
+          "Expanded" : true,
+          "Id" : "flexcontainer-4",
+          "LastContainer" : false,
+          "LazyLoading" : false,
+          "Margin" : "",
+          "Overlay" : false,
+          "ResponsiveLayout" : true,
+          "Scrolling" : "auto-scroll",
+          "ShowDataLoading" : true,
+          "ShowExpandCollapseTab" : false,
+          "SourceURL" : "",
+          "Style" : "DefaultContainerStyle",
+          "StyleProperties" : { },
+          "Type" : "flexcontainer",
+          "UseTheme" : true,
+          "Visible" : true,
+          "Z-index" : 10,
+          "__TypeDisplayName" : "Responsive Container",
+          "align-content" : "flex-start",
+          "align-items" : "flex-start",
+          "flex-basis" : "auto",
+          "flex-direction" : "column",
+          "flex-grow" : 1,
+          "flex-max-height" : "",
+          "flex-max-width" : "",
+          "flex-min-height" : "",
+          "flex-min-width" : "",
+          "flex-shrink" : 1,
+          "flex-size" : "default",
+          "flex-wrap" : "nowrap",
+          "iconClass" : "widgets-flexcontainer",
+          "isLocked" : false,
+          "justify-content" : "flex-start",
+          "positioning" : "responsive",
+          "userCannotRemove" : false
+        },
+        "Widgets" : [ {
+          "Properties" : {
+            "Area" : "UI",
+            "CollapseTabIcon" : "",
+            "DisplayName" : "container-8",
+            "EnableContainerUnload" : false,
+            "EnableExpandCollapse" : false,
+            "ExpandCollapseTabLocation" : "inside",
+            "ExpandTabIcon" : "",
+            "Expanded" : true,
+            "Id" : "flexcontainer-8",
+            "LastContainer" : false,
+            "LazyLoading" : false,
+            "Margin" : "",
+            "Overlay" : false,
+            "ResponsiveLayout" : true,
+            "ShowDataLoading" : true,
+            "ShowExpandCollapseTab" : false,
+            "SourceURL" : "",
+            "Style" : "DefaultContainerStyle",
+            "StyleProperties" : { },
+            "Type" : "flexcontainer",
+            "UseTheme" : true,
+            "Visible" : true,
+            "Z-index" : 10,
+            "__TypeDisplayName" : "Responsive Container",
+            "align-content" : "flex-start",
+            "align-items" : "flex-start",
+            "flex-basis" : "auto",
+            "flex-direction" : "row",
+            "flex-grow" : 1,
+            "flex-max-height" : "50px",
+            "flex-max-width" : "",
+            "flex-min-height" : "50px",
+            "flex-min-width" : "",
+            "flex-shrink" : 1,
+            "flex-size" : "fixed",
+            "flex-wrap" : "nowrap",
+            "iconClass" : "widgets-flexcontainer-fixed",
+            "isLocked" : false,
+            "justify-content" : "flex-start",
+            "positioning" : "responsive",
+            "userCannotRemove" : false
+          },
+          "Widgets" : [ ]
+        }, {
+          "Properties" : {
+            "Area" : "UI",
+            "CollapseTabIcon" : "",
+            "DisplayName" : "container-31",
+            "EnableContainerUnload" : false,
+            "EnableExpandCollapse" : false,
+            "ExpandCollapseTabLocation" : "inside",
+            "ExpandTabIcon" : "",
+            "Expanded" : true,
+            "Id" : "flexcontainer-31",
+            "LastContainer" : false,
+            "LazyLoading" : false,
+            "Margin" : "",
+            "Overlay" : false,
+            "ResponsiveLayout" : true,
+            "ShowDataLoading" : true,
+            "ShowExpandCollapseTab" : false,
+            "SourceURL" : "",
+            "Style" : "DefaultContainerStyle",
+            "StyleProperties" : { },
+            "Type" : "flexcontainer",
+            "UseTheme" : true,
+            "Visible" : true,
+            "Z-index" : 10,
+            "__TypeDisplayName" : "Responsive Container",
+            "align-content" : "flex-start",
+            "align-items" : "flex-start",
+            "flex-basis" : "auto",
+            "flex-direction" : "row",
+            "flex-grow" : 1,
+            "flex-max-height" : "",
+            "flex-max-width" : "",
+            "flex-min-height" : "",
+            "flex-min-width" : "",
+            "flex-shrink" : 1,
+            "flex-size" : "default",
+            "flex-wrap" : "nowrap",
+            "iconClass" : "widgets-flexcontainer",
+            "isLocked" : false,
+            "justify-content" : "flex-start",
+            "positioning" : "responsive",
+            "userCannotRemove" : false
+          },
+          "Widgets" : [ ]
+        }, {
+          "Properties" : {
+            "Area" : "UI",
+            "CollapseTabIcon" : "",
+            "DisplayName" : "container-11",
+            "EnableContainerUnload" : false,
+            "EnableExpandCollapse" : false,
+            "ExpandCollapseTabLocation" : "inside",
+            "ExpandTabIcon" : "",
+            "Expanded" : true,
+            "Id" : "flexcontainer-11",
+            "LastContainer" : false,
+            "LazyLoading" : false,
+            "Margin" : "",
+            "Overlay" : false,
+            "ResponsiveLayout" : true,
+            "ShowDataLoading" : true,
+            "ShowExpandCollapseTab" : false,
+            "SourceURL" : "",
+            "Style" : {
+              "backgroundColor" : "rgba(78,87,88,1)",
+              "displayString" : "",
+              "fontEmphasisBold" : false,
+              "fontEmphasisItalic" : false,
+              "fontEmphasisUnderline" : false,
+              "foregroundColor" : "",
+              "image" : "",
+              "lineColor" : "rgba(78,87,88,1)",
+              "lineStyle" : "solid",
+              "lineThickness" : 1,
+              "secondaryBackgroundColor" : "",
+              "textSize" : "normal"
+            },
+            "StyleProperties" : { },
+            "Type" : "flexcontainer",
+            "UseTheme" : false,
+            "Visible" : true,
+            "Z-index" : 10,
+            "__TypeDisplayName" : "Responsive Container",
+            "align-content" : "flex-start",
+            "align-items" : "center",
+            "flex-basis" : "auto",
+            "flex-direction" : "row",
+            "flex-grow" : 1,
+            "flex-max-height" : "40px",
+            "flex-max-width" : "",
+            "flex-min-height" : "40px",
+            "flex-min-width" : "",
+            "flex-shrink" : 1,
+            "flex-size" : "fixed",
+            "flex-wrap" : "nowrap",
+            "iconClass" : "widgets-flexcontainer-fixed",
+            "isLocked" : false,
+            "justify-content" : "center",
+            "positioning" : "responsive",
+            "userCannotRemove" : false
+          },
+          "Widgets" : [ {
+            "Properties" : {
+              "Area" : "UI",
+              "DisclosureControl" : "show-more",
+              "DisplayName" : "ptcs-label-12",
+              "HorizontalAlignment" : "left",
+              "Id" : "ptcslabel-12",
+              "LabelText" : "LLM-AUGMENTED DATA QUERY",
+              "LabelType" : "label",
+              "LastContainer" : false,
+              "Left" : 134,
+              "Margin" : "5",
+              "MultiLine" : false,
+              "PreserveWhiteSpace" : false,
+              "ResponsiveLayout" : false,
+              "ShowDataLoading" : true,
+              "Top" : 26,
+              "Type" : "ptcslabel",
+              "UseTheme" : true,
+              "VerticalAlignment" : "flex-start",
+              "Visible" : true,
+              "Width" : 251,
+              "Z-index" : 10,
+              "__TypeDisplayName" : "Label",
+              "overflowShowLessTxt" : "[[showLess]]",
+              "overflowShowMoreTxt" : "[[showMore]]"
+            },
+            "Widgets" : [ ]
+          } ]
+        }, {
+          "Properties" : {
+            "Area" : "UI",
+            "CollapseTabIcon" : "",
+            "DisplayName" : "container-32",
+            "EnableContainerUnload" : false,
+            "EnableExpandCollapse" : false,
+            "ExpandCollapseTabLocation" : "inside",
+            "ExpandTabIcon" : "",
+            "Expanded" : true,
+            "Id" : "flexcontainer-32",
+            "LastContainer" : false,
+            "LazyLoading" : false,
+            "Margin" : "",
+            "Overlay" : false,
+            "ResponsiveLayout" : true,
+            "ShowDataLoading" : true,
+            "ShowExpandCollapseTab" : false,
+            "SourceURL" : "",
+            "Style" : "DefaultContainerStyle",
+            "StyleProperties" : { },
+            "Type" : "flexcontainer",
+            "UseTheme" : true,
+            "Visible" : true,
+            "Z-index" : 10,
+            "__TypeDisplayName" : "Responsive Container",
+            "align-content" : "flex-start",
+            "align-items" : "center",
+            "flex-basis" : "auto",
+            "flex-direction" : "row",
+            "flex-grow" : 1,
+            "flex-max-height" : "60px",
+            "flex-max-width" : "",
+            "flex-min-height" : "60px",
+            "flex-min-width" : "",
+            "flex-shrink" : 1,
+            "flex-size" : "fixed",
+            "flex-wrap" : "nowrap",
+            "iconClass" : "widgets-flexcontainer-fixed",
+            "isLocked" : false,
+            "justify-content" : "flex-start",
+            "positioning" : "responsive",
+            "userCannotRemove" : false
+          },
+          "Widgets" : [ {
+            "Properties" : {
+              "Area" : "UI",
+              "ButtonType" : "primary",
+              "ContextID" : "",
+              "Disabled" : false,
+              "DisplayName" : "ptcs-button-35",
+              "Id" : "ptcsbutton-35",
+              "Label" : "Prepare Data",
+              "LabelAlignment" : "center",
+              "LastContainer" : false,
+              "Left" : 239,
+              "Margin" : "5",
+              "MultiLine" : false,
+              "ResponsiveLayout" : false,
+              "ShowDataLoading" : true,
+              "TabSequence" : 0,
+              "Top" : 211,
+              "Type" : "ptcsbutton",
+              "UseTheme" : true,
+              "Visible" : true,
+              "Z-index" : 10,
+              "__TypeDisplayName" : "Button"
+            },
+            "Widgets" : [ ]
+          }, {
+            "Properties" : {
+              "Area" : "UI",
+              "Counter" : false,
+              "CriteriaMessage" : "",
+              "CriteriaMessageDetails" : "",
+              "Disabled" : false,
+              "DisplayName" : "ptcs-textfield-36",
+              "Id" : "ptcstextfield-36",
+              "Label" : "",
+              "LabelAlignment" : "left",
+              "LastContainer" : false,
+              "Left" : 629,
+              "Margin" : "5",
+              "MaxLengthFailureMessage" : "${value} characters is the maximum",
+              "MaxNumberOfCharacters" : 100,
+              "MinLengthFailureMessage" : "${value} characters is the minimum",
+              "Password" : false,
+              "ReadOnly" : true,
+              "RequiredMessage" : "A value is required",
+              "ResponsiveLayout" : false,
+              "ShowClearText" : true,
+              "ShowDataLoading" : false,
+              "ShowValidationCriteria" : false,
+              "ShowValidationFailure" : false,
+              "ShowValidationSuccess" : false,
+              "SuccessMessage" : "",
+              "SuccessMessageDetails" : "",
+              "TabSequence" : 0,
+              "TextAlignment" : "left",
+              "Top" : 6,
+              "Type" : "ptcstextfield",
+              "UseTheme" : true,
+              "ValidationCriteriaIcon" : "cds:icon_info",
+              "ValidationFailureIcon" : "cds:icon_error",
+              "ValidationState" : "undefined",
+              "ValidationSuccessIcon" : "cds:icon_success",
+              "ValueRequired" : false,
+              "Visible" : true,
+              "Width" : 273,
+              "Z-index" : 10,
+              "__TypeDisplayName" : "Text Field"
+            },
+            "Widgets" : [ ]
+          } ]
+        }, {
+          "Properties" : {
+            "Area" : "UI",
+            "CollapseTabIcon" : "",
+            "DisplayName" : "container-14",
+            "EnableContainerUnload" : false,
+            "EnableExpandCollapse" : false,
+            "ExpandCollapseTabLocation" : "inside",
+            "ExpandTabIcon" : "",
+            "Expanded" : true,
+            "Id" : "flexcontainer-14",
+            "LastContainer" : false,
+            "LazyLoading" : false,
+            "Margin" : "",
+            "Overlay" : false,
+            "ResponsiveLayout" : true,
+            "ShowDataLoading" : true,
+            "ShowExpandCollapseTab" : false,
+            "SourceURL" : "",
+            "Style" : "DefaultContainerStyle",
+            "StyleProperties" : { },
+            "Type" : "flexcontainer",
+            "UseTheme" : true,
+            "Visible" : true,
+            "Z-index" : 10,
+            "__TypeDisplayName" : "Responsive Container",
+            "align-content" : "flex-start",
+            "align-items" : "center",
+            "flex-basis" : "auto",
+            "flex-direction" : "row",
+            "flex-grow" : 1,
+            "flex-max-height" : "60px",
+            "flex-max-width" : "",
+            "flex-min-height" : "60px",
+            "flex-min-width" : "",
+            "flex-shrink" : 1,
+            "flex-size" : "fixed",
+            "flex-wrap" : "nowrap",
+            "iconClass" : "widgets-flexcontainer-fixed",
+            "isLocked" : false,
+            "justify-content" : "flex-start",
+            "positioning" : "responsive",
+            "userCannotRemove" : false
+          },
+          "Widgets" : [ {
+            "Properties" : {
+              "Alignment" : "left",
+              "AllLabel" : "[[all]]",
+              "Area" : "UI",
+              "AutoSelectFirstRow" : false,
+              "ClearSelectedItemsLabel" : "[[clearSelectedItems]]",
+              "ClearSelectionItem" : true,
+              "ClearSelectionLabel" : "[[None]]",
+              "CriteriaMessage" : "",
+              "CriteriaMessageDetails" : "",
+              "Disabled" : false,
+              "DisplayField" : "question",
+              "DisplayFieldBaseType" : "STRING",
+              "DisplayName" : "ptcs-dropdown-15",
+              "FilterHintText" : "Filter",
+              "HintText" : "Choose example question...",
+              "Id" : "ptcsdropdown-15",
+              "ItemMeta" : {
+                "type" : "text"
+              },
+              "Label" : "",
+              "LabelAlignment" : "left",
+              "LastContainer" : false,
+              "Left" : 69,
+              "ListFormat_StateParameters" : [ ],
+              "ListMarginTop" : 8,
+              "Margin" : "0",
+              "MultiSelect" : false,
+              "RequiredMessage" : "A selection is required",
+              "ResponsiveLayout" : false,
+              "RowHeight" : 34,
+              "SelectAllLabel" : "[[selectAll]]",
+              "SelectedLabel" : "[[selected]]",
+              "ShowDataLoading" : true,
+              "ShowListFilter" : false,
+              "ShowValidationCriteria" : false,
+              "ShowValidationFailure" : false,
+              "ShowValidationSuccess" : false,
+              "SuccessMessage" : "",
+              "SuccessMessageDetails" : "",
+              "TabSequence" : 0,
+              "Top" : 11,
+              "Type" : "ptcsdropdown",
+              "UseTheme" : true,
+              "ValidationCriteriaIcon" : "cds:icon_info",
+              "ValidationFailureIcon" : "cds:icon_error",
+              "ValidationState" : "undefined",
+              "ValidationSuccessIcon" : "cds:icon_success",
+              "ValueRequired" : false,
+              "Visible" : true,
+              "Width" : 768,
+              "Z-index" : 10,
+              "__TypeDisplayName" : "DropDown"
+            },
+            "Widgets" : [ ]
+          } ]
+        }, {
+          "Properties" : {
+            "Area" : "UI",
+            "CollapseTabIcon" : "",
+            "DisplayName" : "container-9",
+            "EnableContainerUnload" : false,
+            "EnableExpandCollapse" : false,
+            "ExpandCollapseTabLocation" : "inside",
+            "ExpandTabIcon" : "",
+            "Expanded" : true,
+            "Id" : "flexcontainer-9",
+            "LastContainer" : false,
+            "LazyLoading" : false,
+            "Margin" : "",
+            "Overlay" : false,
+            "ResponsiveLayout" : true,
+            "Scrolling" : "auto-scroll",
+            "ShowDataLoading" : true,
+            "ShowExpandCollapseTab" : false,
+            "SourceURL" : "",
+            "Style" : "DefaultContainerStyle",
+            "StyleProperties" : { },
+            "Type" : "flexcontainer",
+            "UseTheme" : true,
+            "Visible" : true,
+            "Z-index" : 10,
+            "__TypeDisplayName" : "Responsive Container",
+            "align-content" : "flex-start",
+            "align-items" : "flex-start",
+            "flex-basis" : "auto",
+            "flex-direction" : "row",
+            "flex-grow" : 1,
+            "flex-max-height" : "200px",
+            "flex-max-width" : "",
+            "flex-min-height" : "200px",
+            "flex-min-width" : "",
+            "flex-shrink" : 1,
+            "flex-size" : "fixed",
+            "flex-wrap" : "nowrap",
+            "iconClass" : "widgets-flexcontainer-fixed",
+            "isLocked" : false,
+            "justify-content" : "flex-start",
+            "positioning" : "responsive",
+            "userCannotRemove" : false
+          },
+          "Widgets" : [ {
+            "Properties" : {
+              "Area" : "UI",
+              "Counter" : true,
+              "CriteriaMessage" : "",
+              "CriteriaMessageDetails" : "",
+              "Disabled" : false,
+              "DisplayName" : "ptcs-textarea-10",
+              "FillContainer" : true,
+              "HintText" : "Ask question or choose example from above...",
+              "Id" : "ptcstextarea-10",
+              "Label" : "Question",
+              "LabelAlignment" : "left",
+              "LastContainer" : false,
+              "Left" : 29,
+              "Margin" : "5",
+              "MaxLengthFailureMessage" : "${value} characters is the maximum",
+              "MaxNumberOfCharacters" : 250,
+              "MinLengthFailureMessage" : "${value} characters is the minimum",
+              "ReadOnly" : false,
+              "RequiredMessage" : "A value is required",
+              "ResponsiveLayout" : true,
+              "ShowDataLoading" : true,
+              "ShowValidationCriteria" : false,
+              "ShowValidationFailure" : false,
+              "ShowValidationSuccess" : false,
+              "SuccessMessage" : "",
+              "SuccessMessageDetails" : "",
+              "TabSequence" : 0,
+              "TextAlignment" : "left",
+              "Top" : 61,
+              "Type" : "ptcstextarea",
+              "UseTheme" : true,
+              "ValidationCriteriaIcon" : "cds:icon_info",
+              "ValidationFailureIcon" : "cds:icon_error",
+              "ValidationState" : "undefined",
+              "ValidationSuccessIcon" : "cds:icon_success",
+              "ValueRequired" : false,
+              "Visible" : true,
+              "Width" : 273,
+              "Z-index" : 10,
+              "__TypeDisplayName" : "Text Area"
+            },
+            "Widgets" : [ ]
+          } ]
+        }, {
+          "Properties" : {
+            "Area" : "UI",
+            "CollapseTabIcon" : "",
+            "DisplayName" : "container-16",
+            "EnableContainerUnload" : false,
+            "EnableExpandCollapse" : false,
+            "ExpandCollapseTabLocation" : "inside",
+            "ExpandTabIcon" : "",
+            "Expanded" : true,
+            "Id" : "flexcontainer-16",
+            "LastContainer" : false,
+            "LazyLoading" : false,
+            "Margin" : "",
+            "Overlay" : false,
+            "ResponsiveLayout" : true,
+            "ShowDataLoading" : true,
+            "ShowExpandCollapseTab" : false,
+            "SourceURL" : "",
+            "Style" : "DefaultContainerStyle",
+            "StyleProperties" : { },
+            "Type" : "flexcontainer",
+            "UseTheme" : true,
+            "Visible" : true,
+            "Z-index" : 10,
+            "__TypeDisplayName" : "Responsive Container",
+            "align-content" : "flex-start",
+            "align-items" : "flex-start",
+            "flex-basis" : "auto",
+            "flex-direction" : "row",
+            "flex-grow" : 1,
+            "flex-max-height" : "48px",
+            "flex-max-width" : "",
+            "flex-min-height" : "48px",
+            "flex-min-width" : "",
+            "flex-shrink" : 1,
+            "flex-size" : "fixed",
+            "flex-wrap" : "nowrap",
+            "iconClass" : "widgets-flexcontainer-fixed",
+            "isLocked" : false,
+            "justify-content" : "flex-end",
+            "positioning" : "responsive",
+            "userCannotRemove" : false
+          },
+          "Widgets" : [ {
+            "Properties" : {
+              "Area" : "UI",
+              "ButtonType" : "primary",
+              "ContextID" : "",
+              "Disabled" : false,
+              "DisplayName" : "ptcs-button-17",
+              "Id" : "ptcsbutton-17",
+              "Label" : "Submit",
+              "LabelAlignment" : "center",
+              "LastContainer" : false,
+              "Left" : 239,
+              "Margin" : "5",
+              "MultiLine" : false,
+              "ResponsiveLayout" : false,
+              "ShowDataLoading" : true,
+              "TabSequence" : 0,
+              "Top" : 211,
+              "Type" : "ptcsbutton",
+              "UseTheme" : true,
+              "Visible" : true,
+              "Z-index" : 10,
+              "__TypeDisplayName" : "Button"
+            },
+            "Widgets" : [ ]
+          } ]
+        }, {
+          "Properties" : {
+            "Area" : "UI",
+            "CollapseTabIcon" : "",
+            "DisplayName" : "container-7",
+            "EnableContainerUnload" : false,
+            "EnableExpandCollapse" : false,
+            "ExpandCollapseTabLocation" : "inside",
+            "ExpandTabIcon" : "",
+            "Expanded" : true,
+            "Id" : "flexcontainer-7",
+            "LastContainer" : false,
+            "LazyLoading" : false,
+            "Margin" : "",
+            "Overlay" : false,
+            "ResponsiveLayout" : false,
+            "Scrolling" : "auto-scroll",
+            "ShowDataLoading" : true,
+            "ShowExpandCollapseTab" : false,
+            "SourceURL" : "",
+            "Style" : "DefaultContainerStyle",
+            "StyleProperties" : { },
+            "Type" : "flexcontainer",
+            "UseTheme" : true,
+            "Visible" : true,
+            "Z-index" : 10,
+            "__TypeDisplayName" : "Responsive Container",
+            "align-content" : "flex-start",
+            "align-items" : "flex-start",
+            "flex-basis" : "auto",
+            "flex-direction" : "row",
+            "flex-grow" : 1,
+            "flex-max-height" : "200px",
+            "flex-max-width" : "",
+            "flex-min-height" : "200px",
+            "flex-min-width" : "",
+            "flex-shrink" : 1,
+            "flex-size" : "fixed",
+            "flex-wrap" : "nowrap",
+            "iconClass" : "widgets-flexcontainer-fixed",
+            "isLocked" : false,
+            "justify-content" : "flex-start",
+            "positioning" : "responsive",
+            "userCannotRemove" : false
+          },
+          "Widgets" : [ {
+            "Properties" : {
+              "Area" : "UI",
+              "Counter" : false,
+              "CriteriaMessage" : "",
+              "CriteriaMessageDetails" : "",
+              "Disabled" : false,
+              "DisplayName" : "ptcs-textarea-13",
+              "FillContainer" : true,
+              "Id" : "ptcstextarea-13",
+              "Label" : "Answer",
+              "LabelAlignment" : "left",
+              "LastContainer" : false,
+              "Left" : 154,
+              "Margin" : "5",
+              "MaxLengthFailureMessage" : "${value} characters is the maximum",
+              "MaxNumberOfCharacters" : 1000000,
+              "MinLengthFailureMessage" : "${value} characters is the minimum",
+              "ReadOnly" : true,
+              "RequiredMessage" : "A value is required",
+              "ResponsiveLayout" : true,
+              "ShowDataLoading" : true,
+              "ShowValidationCriteria" : false,
+              "ShowValidationFailure" : false,
+              "ShowValidationSuccess" : false,
+              "SuccessMessage" : "",
+              "SuccessMessageDetails" : "",
+              "TabSequence" : 0,
+              "TextAlignment" : "left",
+              "Top" : 81,
+              "Type" : "ptcstextarea",
+              "UseTheme" : true,
+              "ValidationCriteriaIcon" : "cds:icon_info",
+              "ValidationFailureIcon" : "cds:icon_error",
+              "ValidationState" : "undefined",
+              "ValidationSuccessIcon" : "cds:icon_success",
+              "ValueRequired" : false,
+              "Visible" : true,
+              "Width" : 273,
+              "Z-index" : 10,
+              "__TypeDisplayName" : "Text Area"
+            },
+            "Widgets" : [ ]
+          } ]
+        }, {
+          "Properties" : {
+            "Area" : "UI",
+            "CollapseTabIcon" : "",
+            "DisplayName" : "container-18",
+            "EnableContainerUnload" : false,
+            "EnableExpandCollapse" : false,
+            "ExpandCollapseTabLocation" : "inside",
+            "ExpandTabIcon" : "",
+            "Expanded" : true,
+            "Id" : "flexcontainer-18",
+            "LastContainer" : false,
+            "LazyLoading" : false,
+            "Margin" : "",
+            "Overlay" : false,
+            "ResponsiveLayout" : true,
+            "ShowDataLoading" : true,
+            "ShowExpandCollapseTab" : false,
+            "SourceURL" : "",
+            "Style" : "DefaultContainerStyle",
+            "StyleProperties" : { },
+            "Type" : "flexcontainer",
+            "UseTheme" : true,
+            "Visible" : true,
+            "Z-index" : 10,
+            "__TypeDisplayName" : "Responsive Container",
+            "align-content" : "flex-start",
+            "align-items" : "flex-start",
+            "flex-basis" : "auto",
+            "flex-direction" : "row",
+            "flex-grow" : 1,
+            "flex-max-height" : "48px",
+            "flex-max-width" : "",
+            "flex-min-height" : "48px",
+            "flex-min-width" : "",
+            "flex-shrink" : 1,
+            "flex-size" : "fixed",
+            "flex-wrap" : "nowrap",
+            "iconClass" : "widgets-flexcontainer-fixed",
+            "isLocked" : false,
+            "justify-content" : "flex-end",
+            "positioning" : "responsive",
+            "userCannotRemove" : false
+          },
+          "Widgets" : [ {
+            "Properties" : {
+              "Area" : "UI",
+              "ButtonType" : "primary",
+              "ContextID" : "",
+              "Disabled" : false,
+              "DisplayName" : "ptcs-button-19",
+              "Id" : "ptcsbutton-19",
+              "Label" : "Clear All",
+              "LabelAlignment" : "center",
+              "LastContainer" : false,
+              "Left" : 239,
+              "Margin" : "5",
+              "MultiLine" : false,
+              "ResponsiveLayout" : false,
+              "ShowDataLoading" : true,
+              "TabSequence" : 0,
+              "Top" : 211,
+              "Type" : "ptcsbutton",
+              "UseTheme" : true,
+              "Visible" : true,
+              "Z-index" : 10,
+              "__TypeDisplayName" : "Button"
+            },
+            "Widgets" : [ ]
+          } ]
+        }, {
+          "Properties" : {
+            "Area" : "UI",
+            "CollapseTabIcon" : "",
+            "DisplayName" : "container-28",
+            "EnableContainerUnload" : false,
+            "EnableExpandCollapse" : false,
+            "ExpandCollapseTabLocation" : "inside",
+            "ExpandTabIcon" : "",
+            "Expanded" : true,
+            "Id" : "flexcontainer-28",
+            "LastContainer" : false,
+            "LazyLoading" : false,
+            "Margin" : "",
+            "Overlay" : false,
+            "ResponsiveLayout" : true,
+            "ShowDataLoading" : true,
+            "ShowExpandCollapseTab" : false,
+            "SourceURL" : "",
+            "Style" : "DefaultContainerStyle",
+            "StyleProperties" : { },
+            "Type" : "flexcontainer",
+            "UseTheme" : true,
+            "Visible" : true,
+            "Z-index" : 10,
+            "__TypeDisplayName" : "Responsive Container",
+            "align-content" : "flex-start",
+            "align-items" : "flex-start",
+            "flex-basis" : "auto",
+            "flex-direction" : "row",
+            "flex-grow" : 1,
+            "flex-max-height" : "",
+            "flex-max-width" : "",
+            "flex-min-height" : "",
+            "flex-min-width" : "",
+            "flex-shrink" : 1,
+            "flex-size" : "default",
+            "flex-wrap" : "nowrap",
+            "iconClass" : "widgets-flexcontainer",
+            "isLocked" : false,
+            "justify-content" : "flex-start",
+            "positioning" : "responsive",
+            "userCannotRemove" : false
+          },
+          "Widgets" : [ ]
+        }, {
+          "Properties" : {
+            "Area" : "UI",
+            "CollapseTabIcon" : "",
+            "DisplayName" : "container-6",
+            "EnableContainerUnload" : false,
+            "EnableExpandCollapse" : false,
+            "ExpandCollapseTabLocation" : "inside",
+            "ExpandTabIcon" : "",
+            "Expanded" : true,
+            "Id" : "flexcontainer-6",
+            "LastContainer" : false,
+            "LazyLoading" : false,
+            "Margin" : "",
+            "Overlay" : false,
+            "ResponsiveLayout" : false,
+            "ShowDataLoading" : true,
+            "ShowExpandCollapseTab" : false,
+            "SourceURL" : "",
+            "Style" : "DefaultContainerStyle",
+            "StyleProperties" : { },
+            "Type" : "flexcontainer",
+            "UseTheme" : true,
+            "Visible" : true,
+            "Z-index" : 10,
+            "__TypeDisplayName" : "Responsive Container",
+            "align-content" : "flex-start",
+            "align-items" : "flex-start",
+            "flex-basis" : "auto",
+            "flex-direction" : "row",
+            "flex-grow" : 1,
+            "flex-max-height" : "100px",
+            "flex-max-width" : "",
+            "flex-min-height" : "100px",
+            "flex-min-width" : "",
+            "flex-shrink" : 1,
+            "flex-size" : "fixed",
+            "flex-wrap" : "nowrap",
+            "iconClass" : "widgets-flexcontainer-fixed",
+            "isLocked" : false,
+            "justify-content" : "flex-start",
+            "positioning" : "responsive",
+            "userCannotRemove" : false
+          },
+          "Widgets" : [ ]
+        } ]
+      }, {
+        "Properties" : {
+          "Area" : "UI",
+          "CollapseTabIcon" : "",
+          "DisplayName" : "container-30",
+          "EnableContainerUnload" : false,
+          "EnableExpandCollapse" : false,
+          "ExpandCollapseTabLocation" : "inside",
+          "ExpandTabIcon" : "",
+          "Expanded" : true,
+          "Id" : "flexcontainer-30",
+          "LastContainer" : false,
+          "LazyLoading" : false,
+          "Margin" : "",
+          "Overlay" : false,
+          "ResponsiveLayout" : true,
+          "ShowDataLoading" : true,
+          "ShowExpandCollapseTab" : false,
+          "SourceURL" : "",
+          "Style" : "DefaultContainerStyle",
+          "StyleProperties" : { },
+          "Type" : "flexcontainer",
+          "UseTheme" : true,
+          "Visible" : true,
+          "Z-index" : 10,
+          "__TypeDisplayName" : "Responsive Container",
+          "align-content" : "flex-start",
+          "align-items" : "flex-start",
+          "flex-basis" : "auto",
+          "flex-direction" : "row",
+          "flex-grow" : 1,
+          "flex-max-height" : "",
+          "flex-max-width" : "",
+          "flex-min-height" : "",
+          "flex-min-width" : "",
+          "flex-shrink" : 1,
+          "flex-size" : "default",
+          "flex-wrap" : "nowrap",
+          "iconClass" : "widgets-flexcontainer",
+          "isLocked" : false,
+          "justify-content" : "flex-start",
+          "positioning" : "responsive",
+          "userCannotRemove" : false
+        },
+        "Widgets" : [ ]
+      }, {
+        "Properties" : {
+          "Area" : "UI",
+          "CollapseTabIcon" : "",
+          "DisplayName" : "container-5",
+          "EnableContainerUnload" : false,
+          "EnableExpandCollapse" : false,
+          "ExpandCollapseTabLocation" : "inside",
+          "ExpandTabIcon" : "",
+          "Expanded" : true,
+          "Id" : "flexcontainer-5",
+          "LastContainer" : false,
+          "LazyLoading" : false,
+          "Margin" : "",
+          "Overlay" : false,
+          "ResponsiveLayout" : true,
+          "ShowDataLoading" : true,
+          "ShowExpandCollapseTab" : false,
+          "SourceURL" : "",
+          "Style" : "DefaultContainerStyle",
+          "StyleProperties" : { },
+          "Type" : "flexcontainer",
+          "UseTheme" : true,
+          "Visible" : true,
+          "Z-index" : 10,
+          "__TypeDisplayName" : "Responsive Container",
+          "align-content" : "flex-start",
+          "align-items" : "flex-start",
+          "flex-basis" : "auto",
+          "flex-direction" : "row",
+          "flex-grow" : 1,
+          "flex-max-height" : "",
+          "flex-max-width" : "200px",
+          "flex-min-height" : "",
+          "flex-min-width" : "200px",
+          "flex-shrink" : 1,
+          "flex-size" : "fixed",
+          "flex-wrap" : "nowrap",
+          "iconClass" : "widgets-flexcontainer-fixed",
+          "isLocked" : false,
+          "justify-content" : "flex-start",
+          "positioning" : "responsive",
+          "userCannotRemove" : false
+        },
+        "Widgets" : [ ]
+      } ]
+    }, {
+      "Properties" : {
+        "Area" : "UI",
+        "AutoRefresh" : true,
+        "DisplayName" : "GetDataStatus",
+        "Id" : "autorefreshfunction-37",
+        "LastContainer" : false,
+        "Left" : null,
+        "Margin" : "5",
+        "RefreshInterval" : "1",
+        "ResponsiveLayout" : false,
+        "ShowDataLoading" : true,
+        "Top" : null,
+        "Type" : "autorefreshfunction",
+        "Visible" : true,
+        "Z-index" : 10,
+        "__TypeDisplayName" : "autorefreshfunction"
+      },
+      "Widgets" : [ ]
+    } ]
+  },
+  "mashupType" : "mashup"
+}]]></mashupContent><preview/><ConfigurationChanges><ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, description : updated&#10;" timestamp="2025-03-31T19:14:39.489Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="header : description : updated&#10;" timestamp="2025-03-31T19:15:00.733Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="header : description : updated&#10;" timestamp="2025-03-31T19:15:31.188Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T19:22:10.758Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T19:33:01.755Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T19:33:54.223Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T19:35:09.523Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T19:37:38.205Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T19:38:41.529Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T19:51:33.875Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T19:52:04.144Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T19:54:09.998Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T19:54:50.598Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T19:58:16.173Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T19:59:02.009Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T20:02:31.925Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T20:05:43.666Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T20:06:09.558Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T20:06:44.305Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T20:08:24.889Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T20:12:15.841Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T20:19:30.302Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T20:22:14.482Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T20:24:12.316Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T20:26:48.705Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T20:27:29.473Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T20:30:11.323Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T20:30:32.463Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T20:30:53.966Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T20:31:39.607Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T20:33:01.718Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T20:34:01.220Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T20:35:22.666Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T20:35:39.550Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T20:36:06.112Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T20:42:10.034Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T20:42:36.511Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T20:43:15.051Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T20:43:56.067Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T20:45:10.589Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T20:51:45.010Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T20:52:03.120Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T20:52:14.174Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T21:43:02.108Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T21:47:45.015Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T21:48:59.280Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T21:53:28.614Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T21:54:09.647Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T21:55:57.614Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T21:56:11.209Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T22:25:05.537Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T22:25:48.152Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T22:26:30.381Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T22:26:59.180Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T22:27:33.325Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T22:28:07.275Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T22:28:53.869Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T22:29:19.423Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T22:30:00.058Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T22:30:52.278Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T22:31:45.552Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T22:32:56.601Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T22:34:45.211Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T22:34:58.089Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T22:35:09.149Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T22:35:21.971Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T22:37:39.507Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T22:40:06.594Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T22:41:50.129Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T22:42:46.721Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T22:43:17.082Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-03-31T22:44:19.162Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-04-03T10:31:07.898Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-04-03T13:16:00.708Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-04-03T13:25:48.614Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-04-03T13:27:02.025Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-04-03T17:28:46.347Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-04-03T17:28:54.267Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-04-03T17:32:21.863Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-04-03T17:35:02.674Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-04-03T17:35:59.154Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="Mashup : design : updated&#10;" timestamp="2025-04-03T17:43:54.115Z" user="Administrator"/></ConfigurationChanges></Mashup></Mashups><ScriptFunctionLibraries/><Projects><Project artifactId="" aspect.projectType="Component" dependsOn="{&quot;extensions&quot;:&quot;&quot;,&quot;projects&quot;:&quot;&quot;}" description="" documentationContent="" groupId="" homeMashup="" lastModifiedDate="2025-04-03T13:30:21.588Z" minPlatformVersion="" name="PTCDTS.TWXLLM" packageVersion="1.0.0" projectName="PTCDTS.TWXLLM" publishResult="" state="DRAFT" tags=""><Owner name="Administrator" type="User"/><avatar/><DesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></DesignTimePermissions><RunTimePermissions/><VisibilityPermissions><Visibility/></VisibilityPermissions><ConfigurationTableDefinitions/><ConfigurationTables/><ConfigurationChanges><ConfigurationChange changeAction="CREATE" changeReason="header : name : updated&#10;" timestamp="2025-03-23T20:40:36.037Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="header : dependsOn : updated&#10;" timestamp="2025-04-03T13:30:21.588Z" user="Administrator"/></ConfigurationChanges></Project></Projects><Users/><DirectoryServices/><Widgets/><MediaEntities/><Groups/><PersistenceProviders/><ModelTags/><LocalizationTables/><Dashboards/><StyleThemes/><DataShapes><DataShape baseDataShape="" description="Data Shape for example data to be used for demo purposes. " documentationContent="" homeMashup="" lastModifiedDate="2025-03-24T18:55:36.672Z" name="PTCDTS.TWXLLM.ExampleData_DS" projectName="PTCDTS.TWXLLM" tags=""><Owner name="Administrator" type="User"/><avatar/><DesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></DesignTimePermissions><RunTimePermissions/><VisibilityPermissions><Visibility/></VisibilityPermissions><ConfigurationTableDefinitions/><ConfigurationTables/><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="" name="asset" ordinal="3"/><FieldDefinition aspect.isPrimaryKey="false" baseType="DATETIME" description="" name="DateTime" ordinal="2"/><FieldDefinition aspect.isPrimaryKey="false" baseType="NUMBER" description="" name="flow" ordinal="10"/><FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="" name="id" ordinal="1"/><FieldDefinition aspect.isPrimaryKey="false" baseType="NUMBER" description="" name="power" ordinal="13"/><FieldDefinition aspect.isPrimaryKey="false" baseType="NUMBER" description="" name="pressure" ordinal="5"/><FieldDefinition aspect.isPrimaryKey="false" baseType="NUMBER" description="" name="rpm" ordinal="12"/><FieldDefinition aspect.isPrimaryKey="false" baseType="NUMBER" description="" name="speed" ordinal="7"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="" name="status" ordinal="4"/><FieldDefinition aspect.isPrimaryKey="false" baseType="NUMBER" description="" name="temperature" ordinal="6"/><FieldDefinition aspect.isPrimaryKey="false" baseType="NUMBER" description="" name="torque" ordinal="11"/><FieldDefinition aspect.isPrimaryKey="false" baseType="NUMBER" description="" name="vibration" ordinal="8"/><FieldDefinition aspect.isPrimaryKey="false" baseType="NUMBER" description="" name="voltage" ordinal="9"/></FieldDefinitions><ConfigurationChanges><ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, description : updated&#10;" timestamp="2025-03-23T21:26:16.085Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="fields : id : added&#10;" timestamp="2025-03-23T21:26:45.347Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="fields : DateTime : added, asset : added, status : added, pressure : added, temperature : added, speed : added, vibration : added, voltage : added, flow : added, torque : added, rpm : added, power : added&#10;" timestamp="2025-03-24T18:55:36.672Z" user="Administrator"/></ConfigurationChanges></DataShape><DataShape baseDataShape="" description="" documentationContent="" homeMashup="" lastModifiedDate="2025-03-31T19:44:35.871Z" name="PTCDTS.TWXLLM.ExampleQuestion_DS" projectName="PTCDTS.TWXLLM" tags=""><Owner name="Administrator" type="User"/><avatar/><DesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></DesignTimePermissions><RunTimePermissions/><VisibilityPermissions><Visibility/></VisibilityPermissions><ConfigurationTableDefinitions/><ConfigurationTables/><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="" name="question" ordinal="1"/></FieldDefinitions><ConfigurationChanges><ConfigurationChange changeAction="CREATE" changeReason="header : name : updated&#10;" timestamp="2025-03-31T19:44:25.139Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="fields : question : added&#10;" timestamp="2025-03-31T19:44:35.871Z" user="Administrator"/></ConfigurationChanges></DataShape></DataShapes><Things><Thing description="Example data to be used for demo purposes. " documentationContent="" effectiveThingPackage="DataTableThing" enabled="true" homeMashup="DataTableEditor" identifier="" inheritedValueStream="" lastModifiedDate="2025-04-03T17:43:29.784Z" name="PTCDTS.TWXLLM.ExampleData_DT" projectName="PTCDTS.TWXLLM" published="false" tags="" thingTemplate="DataTable" valueStream=""><Owner name="Administrator" type="User"/><avatar/><DesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></DesignTimePermissions><RunTimePermissions/><VisibilityPermissions><Visibility/></VisibilityPermissions><ConfigurationTableDefinitions/><ConfigurationTables><ConfigurationTable dataShapeName="" description="Data Thing Configuration" isMultiRow="false" name="DataThingSettings" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition baseType="STRING" description="Persistence Provider Name" name="persistenceProvider" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><persistenceProvider><![CDATA[ThingworxPersistenceProvider]]></persistenceProvider></Row></Rows></ConfigurationTable><ConfigurationTable dataShapeName="" description="Data Shape Configuration" isMultiRow="false" name="Settings" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.friendlyName="Data Shape" baseType="DATASHAPENAME" description="Data shape" name="dataShape" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><accumulatedDataShape><json><![CDATA[{"fieldDefinitions":{"torque":{"name":"torque","aspects":{"isPrimaryKey":false},"description":"","baseType":"NUMBER","ordinal":10},"pressure":{"name":"pressure","aspects":{"isPrimaryKey":false},"description":"","baseType":"NUMBER","ordinal":5},"vibration":{"name":"vibration","aspects":{"isPrimaryKey":false},"description":"","baseType":"NUMBER","ordinal":11},"DateTime":{"name":"DateTime","aspects":{"isPrimaryKey":false},"description":"","baseType":"DATETIME","ordinal":2},"rpm":{"name":"rpm","aspects":{"isPrimaryKey":false},"description":"","baseType":"NUMBER","ordinal":6},"speed":{"name":"speed","aspects":{"isPrimaryKey":false},"description":"","baseType":"NUMBER","ordinal":7},"voltage":{"name":"voltage","aspects":{"isPrimaryKey":false},"description":"","baseType":"NUMBER","ordinal":12},"temperature":{"name":"temperature","aspects":{"isPrimaryKey":false},"description":"","baseType":"NUMBER","ordinal":9},"id":{"name":"id","aspects":{"isPrimaryKey":true},"description":"","baseType":"STRING","ordinal":0},"power":{"name":"power","aspects":{"isPrimaryKey":false},"description":"","baseType":"NUMBER","ordinal":4},"asset":{"name":"asset","aspects":{"isPrimaryKey":false},"description":"","baseType":"STRING","ordinal":1},"flow":{"name":"flow","aspects":{"isPrimaryKey":false},"description":"","baseType":"NUMBER","ordinal":3},"status":{"name":"status","aspects":{"isPrimaryKey":false},"description":"","baseType":"STRING","ordinal":8}}}]]></json></accumulatedDataShape><dataShape><![CDATA[PTCDTS.TWXLLM.ExampleData_DS]]></dataShape></Row></Rows></ConfigurationTable><ConfigurationTable dataShapeName="" description="Index Settings" isMultiRow="true" name="Indexes" ordinal="1"><DataShape><FieldDefinitions><FieldDefinition aspect.friendlyName="Index Field Names" baseType="STRING" description="Index fields" name="fieldNames" ordinal="1"/><FieldDefinition aspect.friendlyName="Index Name" baseType="STRING" description="Index name" name="name" ordinal="0"/></FieldDefinitions></DataShape><Rows/></ConfigurationTable><ConfigurationTable dataShapeName="" description="Configurable options to tune Data Table performance" isMultiRow="false" name="PersistenceProviderCustomSettings" ordinal="2"><DataShape><FieldDefinitions><FieldDefinition aspect.friendlyName="Persistence Provider Custom Settings Table" baseType="INFOTABLE" description="Persistence Provider Custom Config Table" name="customConfigTable" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><customConfigTable><infoTable><DataShape><FieldDefinitions/></DataShape><Rows/></infoTable></customConfigTable></Row></Rows></ConfigurationTable></ConfigurationTables><ThingShape><PropertyDefinitions/><ServiceDefinitions><ServiceDefinition aspect.isAsync="false" category="" description="Generates random data for demo purposes. This never needs to run unless the user wants to generate other data than what already exists in the Data Table. " isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GenerateRandomDemoData"><ResultType baseType="BOOLEAN" description="" name="result" ordinal="0"/><ParameterDefinitions/></ServiceDefinition><ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetDataStatus"><ResultType baseType="STRING" description="" name="result" ordinal="0"/><ParameterDefinitions/></ServiceDefinition></ServiceDefinitions><EventDefinitions/><ServiceMappings/><ServiceImplementations><ServiceImplementation description="" handlerName="Script" name="GenerateRandomDemoData"><ConfigurationTables><ConfigurationTable dataShapeName="" description="" isMultiRow="false" name="Script" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><code><![CDATA[// Clear out any existing or erroneous entries
+me.PurgeDataTableEntries();
+
+// CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(PTCDTS.TWXLLM.ExampleData_DS)
+let exampleData = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+    infoTableName: "InfoTable",
+    dataShapeName: "PTCDTS.TWXLLM.ExampleData_DS"
+});
+
+// Generating random data using the method Math.random() * (max - min) + min, and rounding to 2 decimal places
+let startDatetime = new Date("11/01/2024 00:00:00");
+startDatetime = dateAddHours(startDatetime, 4); // Adjusting for timezone
+// var result = startDatetime;
+const assets = ['Machine1', 'Machine2', 'Machine3'];
+let row;
+let randomNum;
+let runningThreshold = 0.8; //gives 80% chance that an asset will be listed as "running"
+for (let i = 0; i < 2880; i++) { // 2880 hours between 12 AM November 1, 2024 and 12 AM March 1, 2025.
+    for (let j = 0; j < assets.length; j++) {
+    	row = {};
+        row.id = (i * assets.length + j).toString();
+        row.DateTime = startDatetime;
+        row.asset = assets[j];
+        randomNum = Math.random();
+        if (randomNum < runningThreshold){
+        	row.status = 'running';
+        } else {
+            row.status = 'idle';
+        }
+        row.pressure = parseFloat(Math.random() * (150 - 50) + 50).toFixed(2);
+        row.temperature = parseFloat(Math.random() * (120 - 20) + 20).toFixed(2);
+        row.speed = parseFloat(Math.random() * (1000 - 100) + 100).toFixed(2);
+        row.vibration = parseFloat(Math.random() * (5 - 0) + 0).toFixed(2);
+        row.voltage = parseFloat(Math.random() * (240 - 210) + 210).toFixed(2);
+        row.flow = parseFloat(Math.random() * (100 - 10) + 10).toFixed(2);
+        row.torque = parseFloat(Math.random() * (500 - 100) + 100).toFixed(2);
+        row.rpm = parseFloat(Math.random() * (1500 - 500) + 500).toFixed(2);
+        row.power = parseFloat(Math.random() * (500 - 50) + 50).toFixed(2);
+        exampleData.AddRow(row);
+    }
+	startDatetime = dateAddHours(startDatetime, 1);
+}
+//var result = exampleData;
+
+me.AddDataTableEntries({
+	values: exampleData /* INFOTABLE */
+});
+
+]]></code></Row></Rows></ConfigurationTable></ConfigurationTables></ServiceImplementation><ServiceImplementation description="" handlerName="Script" name="GetDataStatus"><ConfigurationTables><ConfigurationTable dataShapeName="" description="" isMultiRow="false" name="Script" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><code><![CDATA[let result;
+let currentRowCount = me.GetDataTableEntryCount();
+// 2880 hours from Nov 1, 2024 - Feb 28, 2025, 3 assets. 2880 * 3 = 8640
+let pctComplete = parseFloat((currentRowCount / 8640) * 100).toFixed(2); 
+if (pctComplete == 100){ 
+    result = "Data is ready.";
+} else if (pctComplete == 0){
+    result = "Click 'Prepare Data' to begin.";
+} else {
+    result = "Preparing data: "+pctComplete+"% complete.";
+}
+
+]]></code></Row></Rows></ConfigurationTable></ConfigurationTables></ServiceImplementation></ServiceImplementations><Subscriptions/></ThingShape><PropertyBindings/><RemotePropertyBindings/><RemoteServiceBindings/><RemoteEventBindings/><AlertConfigurations/><ImplementedShapes/><ThingProperties/><ConfigurationChanges><ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, description : updated&#10;" timestamp="2025-03-23T21:27:01.365Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2025-03-24T18:56:19.718Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="configuration : dataShape : updated&#10;" timestamp="2025-03-24T18:56:46.233Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : AddDemoData : service added&#10;" timestamp="2025-03-24T19:59:14.380Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : AddDemoData : service updated&#10;" timestamp="2025-03-24T20:02:13.254Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : AddDemoData : output updated&#10;" timestamp="2025-03-24T20:06:37.329Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : AddDemoData : service updated&#10;" timestamp="2025-03-24T20:06:50.766Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : AddDemoData : service updated&#10;" timestamp="2025-03-24T20:08:03.529Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : AddDemoData : service updated&#10;" timestamp="2025-03-24T20:08:25.421Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : AddDemoData : service updated&#10;" timestamp="2025-03-24T20:08:42.132Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : AddDemoData : service updated&#10;" timestamp="2025-03-24T20:09:01.438Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : AddDemoData : service updated&#10;" timestamp="2025-03-24T20:09:17.101Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : AddDemoData : service updated&#10;" timestamp="2025-03-24T20:09:31.523Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : AddDemoData : service updated&#10;" timestamp="2025-03-24T20:09:47.364Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : AddDemoData : service updated&#10;" timestamp="2025-03-24T20:12:08.407Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : AddDemoData : service updated&#10;" timestamp="2025-03-24T20:13:53.443Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : AddDemoData : service updated&#10;" timestamp="2025-03-24T20:13:58.271Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : AddDemoData : service updated&#10;" timestamp="2025-03-24T20:14:04.646Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : AddDemoData : service updated&#10;" timestamp="2025-03-24T20:14:11.177Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : AddDemoData : service updated&#10;" timestamp="2025-03-24T20:14:33.613Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : AddDemoData : service updated&#10;" timestamp="2025-03-24T20:14:42.238Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : AddDemoData : service updated&#10;" timestamp="2025-03-24T20:51:34.657Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : AddDemoData : output updated&#10;" timestamp="2025-03-24T21:02:12.275Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : AddDemoData : service updated&#10;" timestamp="2025-03-24T21:04:41.771Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : AddDemoData : service updated&#10;" timestamp="2025-03-24T21:05:19.790Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : AddDemoData : service updated&#10;" timestamp="2025-03-24T21:07:39.990Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="header : homeMashup : updated&#10;" timestamp="2025-03-24T21:10:06.348Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="header : homeMashup : updated&#10;" timestamp="2025-03-24T21:10:15.208Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="header : homeMashup : updated&#10;" timestamp="2025-03-24T21:10:57.494Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="header : homeMashup : updated&#10;" timestamp="2025-03-24T21:11:22.793Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : AddDemoData : service updated&#10;" timestamp="2025-03-24T21:19:39.777Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : AddDemoData : service updated&#10;" timestamp="2025-03-24T21:22:08.747Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : AddDemoData : service updated&#10;" timestamp="2025-03-24T21:26:15.863Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2025-03-24T21:26:20.785Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : AddDemoData : description updated&#10;" timestamp="2025-03-31T12:58:48.557Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : AddDemoData : service updated, service deleted&#10;GenerateRandomDemoData : service added&#10;" timestamp="2025-04-03T12:32:06.659Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GenerateRandomDemoData : service updated&#10;GetDataStatus : service added&#10;" timestamp="2025-04-03T13:17:46.570Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetDataStatus : output updated&#10;" timestamp="2025-04-03T13:21:33.127Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetDataStatus : service updated&#10;" timestamp="2025-04-03T13:21:50.897Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetDataStatus : service updated&#10;" timestamp="2025-04-03T13:22:00.274Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetDataStatus : service updated&#10;" timestamp="2025-04-03T13:22:10.322Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetDataStatus : service updated&#10;" timestamp="2025-04-03T13:23:07.449Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GenerateRandomDemoData : service updated&#10;" timestamp="2025-04-03T13:31:53.011Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GenerateRandomDemoData : output updated&#10;" timestamp="2025-04-03T17:17:29.283Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetDataStatus : output updated&#10;" timestamp="2025-04-03T17:25:40.024Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetDataStatus : service updated&#10;" timestamp="2025-04-03T17:25:51.349Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetDataStatus : service updated&#10;" timestamp="2025-04-03T17:27:11.433Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetDataStatus : service updated&#10;" timestamp="2025-04-03T17:27:38.656Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetDataStatus : service updated&#10;" timestamp="2025-04-03T17:27:45.968Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetDataStatus : service updated&#10;" timestamp="2025-04-03T17:28:00.791Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetDataStatus : service updated&#10;" timestamp="2025-04-03T17:38:44.515Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetDataStatus : service updated&#10;" timestamp="2025-04-03T17:39:31.727Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetDataStatus : service updated&#10;" timestamp="2025-04-03T17:43:29.784Z" user="Administrator"/></ConfigurationChanges></Thing><Thing description="Manager Thing for the TWXLLM demo application." documentationContent="" effectiveThingPackage="ConfiguredThing" enabled="true" homeMashup="" identifier="" inheritedValueStream="" lastModifiedDate="2025-04-03T18:00:55.441Z" name="PTCDTS.TWXLLM.Manager" projectName="PTCDTS.TWXLLM" published="false" tags="" thingTemplate="GenericThing" valueStream=""><Owner name="Administrator" type="User"/><avatar/><DesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></DesignTimePermissions><RunTimePermissions/><VisibilityPermissions><Visibility/></VisibilityPermissions><ConfigurationTableDefinitions/><ConfigurationTables/><ThingShape><PropertyDefinitions><PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isPersistent="true" baseType="STRING" category="" description="" isLocalOnly="false" name="GPTAuth" ordinal="2"/><PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isPersistent="true" baseType="STRING" category="" description="" isLocalOnly="false" name="GPTUrl" ordinal="3"/></PropertyDefinitions><ServiceDefinitions><ServiceDefinition aspect.isAsync="false" category="" description="Takes the natural language question entered by the user in the Mashup and adds the necessary context and information for the LLM to generate the data query, aggregate parameters, and a natural language preamble for the final answer. &#10;Example question:&#10;&quot;What was the average temperature recorded on Machine3 during December 2024? &quot;" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="CreatePrompt"><ResultType baseType="STRING" description="" name="result" ordinal="0"/><ParameterDefinitions><FieldDefinition baseType="STRING" description="" name="userQuestion" ordinal="1"/></ParameterDefinitions></ServiceDefinition><ServiceDefinition aspect.isAsync="false" category="" description="Returns an example question to display in the Mashup." isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetExampleQuestion"><ResultType aspect.dataShape="PTCDTS.TWXLLM.ExampleQuestion_DS" baseType="INFOTABLE" description="" name="result" ordinal="0"/><ParameterDefinitions/></ServiceDefinition><ServiceDefinition aspect.isAsync="false" category="" description="Passes the complete prompt (natural language question plus context and information) to the LLM and returns the result." isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetLLMTextResponse"><ResultType baseType="STRING" description="" name="result" ordinal="0"/><ParameterDefinitions><FieldDefinition baseType="STRING" description="" name="prompt" ordinal="1"/><FieldDefinition aspect.defaultValue="0.1" baseType="NUMBER" description="" name="top_p" ordinal="2"/></ParameterDefinitions></ServiceDefinition><ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="ProcessData"><ResultType baseType="STRING" description="" name="result" ordinal="0"/><ParameterDefinitions><FieldDefinition baseType="JSON" description="" name="aggregateParams" ordinal="2"/><FieldDefinition baseType="JSON" description="" name="query" ordinal="3"/></ParameterDefinitions></ServiceDefinition><ServiceDefinition aspect.isAsync="false" category="" description="This is the main service that  takes the question from the Mashup, orchestrates the flow of data and information through the other services to ultimately produce a natural language answer that is displayed in the Mashup." isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="ProcessQuestion"><ResultType baseType="STRING" description="" name="result" ordinal="0"/><ParameterDefinitions><FieldDefinition baseType="STRING" description="Master service that orchestrates the flow of data and information through all the other services to generate a final answer.&#10;An example user question is &quot;What was the average temperature recorded on Machine3 during December 2024?&quot;" name="userQuestion" ordinal="1"/></ParameterDefinitions></ServiceDefinition></ServiceDefinitions><EventDefinitions/><ServiceMappings/><ServiceImplementations><ServiceImplementation description="" handlerName="Script" name="CreatePrompt"><ConfigurationTables><ConfigurationTable dataShapeName="" description="" isMultiRow="false" name="Script" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><code><![CDATA[try {
+    let prompt = "Please write a query that can be used in ThingWorx to query data from a Data Table. The query should use the";
+    prompt = prompt+ " {Data Table information} below to address the {user question}. Below is an {example query} to use for reference.";
+    
+    prompt = prompt+ ' {example query}:';
+    prompt = prompt+ '"{';
+    prompt = prompt+ '"filters":{';
+    prompt = prompt+ '"type":"AND",';
+    prompt = prompt+ '"filters":[';
+    prompt = prompt+ '{';
+    prompt = prompt+ '"type":"EQ",';
+    prompt = prompt+ '"fieldName":"asset",';
+    prompt = prompt+ '"value":"Machine2"';
+    prompt = prompt+ '},{';
+    prompt = prompt+ '"type":"Between",';
+    prompt = prompt+ '"fieldName":"DateTime",';
+    prompt = prompt+ '"from":"2024-12-01T00:00:00.000Z",';
+    prompt = prompt+ '"to":"2024-12-31T23:59:59.999Z"';
+    prompt = prompt+ '}]}}".';
+    
+    prompt = prompt+ " {user Question}: '"+userQuestion+"?'";
+    
+    prompt = prompt+ " {Data Table Information}: The names of the columns and their associated data types are: ";
+    let fields = DataShapes["PTCDTS.TWXLLM.ExampleData_DS"].GetFieldDefinitions();
+    let fieldIndex = 0;
+    fields.rows.toArray().forEach(row => {
+        prompt = prompt+ " Field "+fieldIndex+": '"+row.name+"' ("+row.baseType+"),";
+        fieldIndex++;
+    });
+    prompt = prompt.slice(0, -1); 
+    prompt = prompt+ ".";
+    
+    prompt = prompt+ " The assets in the Data Table are 'Machine1', 'Machine2', and 'Machine3'.";
+    prompt = prompt+ " The data in the Data Table run from 11/01/2024 00:00:00 to 03/01/2025 00:00:00.";
+    prompt = prompt+ " Data in the Data Table is recorded at an hourly rate.";
+    prompt = prompt+ " The status for an asset at any given time is 'idle' or 'running'.";
+     
+    prompt = prompt+ " Next write JSON parameters for ThingWorx to use when aggregating the queried data into the answer requested";
+    prompt = prompt+ " by the user. Use the {example parameters} for reference.";
+    prompt = prompt+ " {example parameters}:";
+    prompt = prompt+ '"{';
+    prompt = prompt+ '"t":"returnedData",';
+    prompt = prompt+ '"columns":"temperature",';
+    prompt = prompt+ '"aggregates":"AVERAGE",';
+    prompt = prompt+ '}".';
+    
+    prompt = prompt+ " Possible aggregates to use in the parameters include 'MIN', 'MAX', 'AVERAGE', 'SUM', and 'COUNT'.";
+    
+    prompt = prompt+ " Next generate a preamble for the answer. For example, 'The average temperature during December 2024 was '.";
+    prompt = prompt+ " The actual numeric answer will be calculated by ThingWorx and added at the end of the preamble.";
+    
+    //Simple guardrails to keep user questions focused on the available data  
+    prompt = prompt+ " If the user asks any kind of question that can't be directly answered using the data available in";
+    prompt = prompt+ " the Data Table, or aggregated using the possible aggregates, then this is an invalid question.";
+    prompt = prompt+ " Return a message that asks the user to try a different question, and offer suggestions that may";
+    prompt = prompt+ " help the user ask a valid question.";
+    
+    prompt = prompt+ " If the user's question is valid, return the query between two '$' symbols, the aggregation";
+    prompt = prompt+ " parameters between parentheses '(' and ')', and the preamble between the symbols '<' and '>'.";
+    prompt = prompt+ " Don't add any underscores or other extraneous characters to the response.";
+    prompt = prompt+ " Don't include any explanation in your response.";
+    
+    var result = prompt;
+    
+} catch(e) {
+	logger.error("Error in GeneratePrompt: "+e+" at line "+e.lineNumber);   
+    throw(e);
+}
+
+]]></code></Row></Rows></ConfigurationTable></ConfigurationTables></ServiceImplementation><ServiceImplementation description="" handlerName="Script" name="GetExampleQuestion"><ConfigurationTables><ConfigurationTable dataShapeName="" description="" isMultiRow="false" name="Script" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><code><![CDATA[try {
+    var questions = DataShapes["PTCDTS.TWXLLM.ExampleQuestion_DS"].CreateValues();
+    questions.AddRow({question:"What was the maximum pressure observed on Machine3 during February 2025?"});
+    questions.AddRow({question:"What was the average temperature recorded on Machine2 on December 12th, 2024?"});
+    questions.AddRow({question:"What was the highest speed registered by Machine1 in January 2025?"});
+    questions.AddRow({question:"How many hours was machine #1 running on February 22nd, 2025?"});
+    questions.AddRow({question:"How many times did torque exceed 325 on machine 3 during the first week of January 2025?"});
+    questions.AddRow({question:"What was the lowest rpm recorded for Machine2 between 3pm and 6pm on December 31, 2024?"});
+    var result = questions;
+} catch(e) {
+	logger.error("Error in GetExampleQuestion: "+e+" at line "+e.lineNumber);   
+    throw(e);
+}]]></code></Row></Rows></ConfigurationTable></ConfigurationTables></ServiceImplementation><ServiceImplementation description="" handlerName="Script" name="GetLLMTextResponse"><ConfigurationTables><ConfigurationTable dataShapeName="" description="" isMultiRow="false" name="Script" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><code><![CDATA[let result;
+try {
+    if (me.GPTAuth == '####' || me.GPTUrl == '####'){
+        result = "Please make sure the correct GPTUrl and GPTAuth property values are set on the 'PTCDTS.TWXLLM.Manager' Thing.";
+    } else {
+        params = {
+            headers: {
+                "api-key": me.GPTAuth,
+                "Content-Type": "application/json"
+            },
+            url: me.GPTUrl,
+            content: {
+                "messages": [{"role": "user", "content": prompt }],
+                "top_p": top_p
+            }
+        };
+        result = Resources["ContentLoaderFunctions"].PostJSON(params).choices[0].message.content.trim();
+    }
+} catch(e) {
+	logger.error("Error in GetLLMTextResponse: "+e+" at line "+e.lineNumber);   
+    throw(e);
+}    ]]></code></Row></Rows></ConfigurationTable></ConfigurationTables></ServiceImplementation><ServiceImplementation description="" handlerName="Script" name="ProcessData"><ConfigurationTables><ConfigurationTable dataShapeName="" description="" isMultiRow="false" name="Script" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><code><![CDATA[try {
+    var result;
+    // Query data from the Data Table    
+    let returnedData = Things["PTCDTS.TWXLLM.ExampleData_DT"].QueryDataTableEntries({
+    	maxItems: 10000 /* NUMBER */, //Setting to 10000 ensures all relevant records for this data are returned 
+    	query: query /* QUERY */,
+    });
+    
+    // Use returnedData infotable with other parameters generated by LLM
+    processedAggregateParams = {
+    	t: returnedData /* INFOTABLE */,
+    	columns: aggregateParams["columns"] /* STRING */,
+    	aggregates: aggregateParams["aggregates"] /* STRING */,
+    };
+    
+    let aggregatedResult = Resources["InfoTableFunctions"].Aggregate(processedAggregateParams);
+    
+    //Get name of the column of the aggregated result. This name will be constructed by TWX
+    let aggregatedResultFields = aggregatedResult.dataShape.fields;
+    let aggregatedResultFieldName = Object.keys(aggregatedResultFields)[0];
+    
+    // Round the result to 2 decimal places
+    let roundedResult = parseFloat(aggregatedResult.rows[0][aggregatedResultFieldName]).toFixed(2);
+    result = roundedResult;
+} catch(e) {
+	logger.error("Error in ProcessData: "+e+" at line "+e.lineNumber);   
+    throw(e);
+}]]></code></Row></Rows></ConfigurationTable></ConfigurationTables></ServiceImplementation><ServiceImplementation description="" handlerName="Script" name="ProcessQuestion"><ConfigurationTables><ConfigurationTable dataShapeName="" description="" isMultiRow="false" name="Script" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><code><![CDATA[let result;
+
+if (Things["PTCDTS.TWXLLM.ExampleData_DT"].GetDataStatus() != 'Data is ready.'){ // If data is not ready, request user to prepare data
+    result = "Please prepare data before submitting questions.";
+} else {
+    let prompt = me.CreatePrompt({
+    	userQuestion: userQuestion /* STRING */
+    });
+    //logger.warn("prompt "+prompt);
+    
+    let llmTextResponse = me.GetLLMTextResponse({
+    	prompt: prompt /* STRING */,
+    	top_p: undefined /* NUMBER {"defaultValue":0.1} */
+    });
+    //logger.warn("llmTextResponse "+llmTextResponse);
+    
+    // If the response from the LLM didn't include '[', then the question was not valid and the LLM created a retry message for the user.
+    // If the response from the LLM did include '[', then the question was valid, and the Data Table query, aggregate
+    // parameters, and the answer preamble are extracted for subsequent steps.
+    let substring = '[';
+    if (!llmTextResponse.includes(substring)){  
+        result = llmTextResponse;
+    } else {
+        let query = llmTextResponse.split('$')[1];
+    //    logger.warn("query "+query);
+        
+        let paramsIndex1 = llmTextResponse.indexOf('(');
+    	let paramsIndex2 = llmTextResponse.indexOf(')');
+        let aggregateParams = llmTextResponse.substring(paramsIndex1 + 1, paramsIndex2);
+    //    logger.warn("aggregateParams "+aggregateParams);
+        
+        let preambleIndex1 = llmTextResponse.indexOf('<');
+    	let preambleIndex2 = llmTextResponse.indexOf('>');
+        let preamble = llmTextResponse.substring(preambleIndex1 + 1, preambleIndex2);
+    //    logger.warn("preamble "+preamble);
+        
+        let aggregatedResult = me.ProcessData({
+        	aggregateParams: aggregateParams /* JSON */,
+        	query: query /* JSON */
+        });
+    //    logger.warn("aggregatedResult "+aggregatedResult);
+        
+        result = preamble + aggregatedResult + ".";
+    }
+}]]></code></Row></Rows></ConfigurationTable></ConfigurationTables></ServiceImplementation></ServiceImplementations><Subscriptions/></ThingShape><PropertyBindings/><RemotePropertyBindings/><RemoteServiceBindings/><RemoteEventBindings/><AlertConfigurations><AlertDefinitions name="GPTAuth"/><AlertDefinitions name="GPTUrl"/></AlertConfigurations><ImplementedShapes/><ThingProperties><GPTUrl><Value><![CDATA[####]]></Value><Timestamp>2025-04-03T18:41:02.039Z</Timestamp><Quality>GOOD</Quality></GPTUrl><GPTAuth><Value><![CDATA[####]]></Value><Timestamp>2025-04-03T18:00:18.738Z</Timestamp><Quality>GOOD</Quality></GPTAuth></ThingProperties><ConfigurationChanges><ConfigurationChange changeAction="CREATE" changeReason="header : name : updated&#10;" timestamp="2025-03-24T21:29:24.597Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="header : description : updated&#10;" timestamp="2025-03-24T21:29:48.027Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GPT_Text_Response : service added&#10;" timestamp="2025-03-24T21:54:03.037Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GPT_Text_Response : input parameter top_p added, inputs updated&#10;" timestamp="2025-03-24T21:57:03.829Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GPT_Text_Response : output updated&#10;" timestamp="2025-03-24T21:57:40.234Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="properties : GPTAuth : added, GPTUrl : added&#10;" timestamp="2025-03-24T21:59:41.508Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : service added&#10;" timestamp="2025-03-25T18:11:29.344Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : service updated&#10;" timestamp="2025-03-25T18:38:06.791Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : service updated&#10;" timestamp="2025-03-25T18:46:35.195Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : input parameter query added, inputs updated, input parameter query updated, inputs updated&#10;" timestamp="2025-03-25T18:48:14.710Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : service updated&#10;" timestamp="2025-03-25T18:48:25.116Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : service updated&#10;" timestamp="2025-03-25T19:03:28.512Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : service updated&#10;" timestamp="2025-03-25T19:03:52.450Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : service updated&#10;" timestamp="2025-03-25T20:26:45.160Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : service updated&#10;" timestamp="2025-03-25T20:28:50.574Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : service updated&#10;" timestamp="2025-03-25T20:39:36.540Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : output updated&#10;" timestamp="2025-03-25T20:45:29.504Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : service updated&#10;" timestamp="2025-03-25T20:46:25.222Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : output updated&#10;" timestamp="2025-03-25T20:46:33.769Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : service updated&#10;" timestamp="2025-03-25T20:47:59.709Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : output updated&#10;" timestamp="2025-03-25T20:51:37.518Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : service updated&#10;" timestamp="2025-03-25T20:53:09.912Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : service updated&#10;" timestamp="2025-03-25T20:53:35.154Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : service updated&#10;" timestamp="2025-03-25T20:55:52.609Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : service updated&#10;" timestamp="2025-03-25T20:56:09.030Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : service updated&#10;" timestamp="2025-03-25T20:58:05.931Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : service updated&#10;" timestamp="2025-03-25T20:58:29.777Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : service updated&#10;" timestamp="2025-03-25T20:58:51.467Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : service updated&#10;" timestamp="2025-03-25T21:03:26.426Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : service updated&#10;" timestamp="2025-03-25T21:03:56.278Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : service updated&#10;" timestamp="2025-03-25T21:04:37.312Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : service updated&#10;" timestamp="2025-03-25T21:05:02.030Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : service updated&#10;" timestamp="2025-03-25T21:07:30.288Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : service updated&#10;" timestamp="2025-03-25T21:08:02.915Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : service updated&#10;" timestamp="2025-03-25T21:08:26.722Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : service updated&#10;" timestamp="2025-03-25T21:11:00.297Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : service updated&#10;" timestamp="2025-03-25T21:14:46.387Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : service updated&#10;" timestamp="2025-03-25T21:21:39.304Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : service updated&#10;" timestamp="2025-03-25T21:22:33.954Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : service updated&#10;" timestamp="2025-03-25T21:23:37.007Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : service updated&#10;" timestamp="2025-03-25T21:25:43.138Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : service updated&#10;" timestamp="2025-03-25T21:25:50.078Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : service updated&#10;" timestamp="2025-03-25T21:26:05.110Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : service updated&#10;" timestamp="2025-03-25T21:26:10.985Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : service updated&#10;" timestamp="2025-03-25T21:28:51.193Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : service updated&#10;" timestamp="2025-03-25T21:29:19.327Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : service updated&#10;GeneratePrompt : service added&#10;" timestamp="2025-03-27T16:15:33.017Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : input parameter userQuestion added, inputs updated&#10;" timestamp="2025-03-27T16:29:45.332Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : output updated&#10;" timestamp="2025-03-27T16:33:40.613Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-27T16:39:40.886Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-27T17:17:23.836Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;GetMetaData : service added&#10;" timestamp="2025-03-27T17:20:43.344Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetMetaData : output updated&#10;" timestamp="2025-03-27T17:21:25.145Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetMetaData : service updated&#10;" timestamp="2025-03-27T17:24:06.564Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetMetaData : service updated&#10;" timestamp="2025-03-27T17:25:25.626Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetMetaData : service updated&#10;" timestamp="2025-03-27T17:37:26.024Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-27T17:38:17.558Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-27T17:40:22.976Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-27T17:42:36.235Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-27T17:48:56.796Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-27T18:43:52.873Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-27T18:48:40.972Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetMetaData : service updated&#10;" timestamp="2025-03-27T18:51:03.268Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-27T18:51:13.378Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-27T18:51:19.034Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-27T18:52:37.636Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-27T18:53:31.456Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-27T18:53:52.964Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-27T18:56:16.647Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-27T19:20:11.350Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-27T20:13:51.685Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-27T20:17:02.646Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-27T20:21:46.101Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-27T22:05:25.555Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-27T22:13:12.432Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : input parameter userQuestion updated, inputs updated&#10;" timestamp="2025-03-27T22:15:45.977Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : input parameter userQuestion updated, inputs updated&#10;" timestamp="2025-03-27T22:16:48.902Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GPT_Text_Response : input parameter userQuestion added, inputs updated&#10;" timestamp="2025-03-27T22:18:47.524Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GPT_Text_Response : service updated&#10;" timestamp="2025-03-27T22:27:37.469Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-27T22:29:40.865Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-27T22:32:46.267Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-27T22:33:50.707Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GPT_Text_Response : service updated&#10;ProcessQuestion : service added&#10;" timestamp="2025-03-27T22:39:52.578Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessQuestion : input parameter userQuestion added, inputs updated, input parameter userQuestion updated, inputs updated&#10;" timestamp="2025-03-27T22:42:21.260Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessQuestion : output updated&#10;" timestamp="2025-03-27T22:44:17.728Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessQuestion : service updated&#10;" timestamp="2025-03-27T22:44:27.668Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessQuestion : service updated&#10;" timestamp="2025-03-28T11:23:19.630Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessQuestion : service updated&#10;" timestamp="2025-03-28T11:48:58.723Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-28T11:52:42.554Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessQuestion : service updated&#10;" timestamp="2025-03-28T12:00:42.639Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-28T12:10:46.921Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessQuestion : service updated&#10;GetExampleQuestion : service added&#10;" timestamp="2025-03-28T12:16:00.161Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetExampleQuestion : service updated&#10;" timestamp="2025-03-28T12:18:48.303Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetExampleQuestion : output updated&#10;" timestamp="2025-03-28T12:19:02.892Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetExampleQuestion : service updated&#10;" timestamp="2025-03-28T12:21:42.938Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessQuestion : service updated&#10;" timestamp="2025-03-28T14:37:09.972Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : output updated&#10;" timestamp="2025-03-28T14:54:03.498Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : service updated&#10;ProcessData : service added&#10;" timestamp="2025-03-28T14:56:24.628Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : input parameter queriedData added, inputs updated, input parameter parameters added, inputs updated, output updated&#10;" timestamp="2025-03-28T15:06:50.075Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-28T15:07:19.267Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : input parameter parameters updated, inputs updated&#10;" timestamp="2025-03-28T15:09:07.159Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : service updated&#10;" timestamp="2025-03-28T17:03:00.539Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-28T17:03:45.156Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-28T17:04:48.866Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GPT_Text_Response : service updated&#10;" timestamp="2025-03-28T17:05:08.394Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GPT_Text_Response : service updated&#10;" timestamp="2025-03-28T17:09:47.737Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-28T17:36:05.618Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-28T18:36:21.946Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-28T20:35:04.042Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-28T20:36:19.218Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-28T20:36:41.921Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GPT_Text_Response : service updated&#10;" timestamp="2025-03-28T20:50:17.221Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-30T16:58:20.469Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-30T16:59:37.739Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-30T17:14:59.965Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-30T17:20:49.434Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-30T17:27:08.374Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-30T17:32:18.089Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-30T17:33:44.436Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-30T17:35:55.982Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-30T17:36:45.850Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GPT_Text_Response : service updated&#10;" timestamp="2025-03-30T17:38:45.430Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GPT_Text_Response : service updated&#10;" timestamp="2025-03-30T17:42:23.243Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-30T17:43:56.782Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessQuestion : service updated&#10;" timestamp="2025-03-30T17:56:23.079Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessQuestion : service updated&#10;" timestamp="2025-03-30T17:56:37.985Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessQuestion : service updated&#10;" timestamp="2025-03-30T18:05:36.575Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessQuestion : service updated&#10;" timestamp="2025-03-30T18:06:29.744Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessQuestion : service updated&#10;" timestamp="2025-03-30T18:07:02.249Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessQuestion : service updated&#10;" timestamp="2025-03-30T18:15:55.372Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessQuestion : service updated&#10;" timestamp="2025-03-30T18:16:30.826Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessQuestion : service updated&#10;" timestamp="2025-03-30T18:17:06.213Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : input parameter aggregateParams updated, inputs updated, input parameter query added, inputs updated&#10;" timestamp="2025-03-30T18:19:48.437Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : input parameter query updated, inputs updated&#10;" timestamp="2025-03-30T18:20:51.899Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : output updated&#10;" timestamp="2025-03-30T18:21:47.306Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-30T18:24:48.425Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : output updated&#10;" timestamp="2025-03-30T18:24:56.909Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : output updated&#10;" timestamp="2025-03-30T18:25:38.411Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : output updated&#10;" timestamp="2025-03-30T18:26:44.897Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-30T18:27:22.237Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-30T18:27:53.075Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-30T18:28:14.549Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-30T18:28:25.553Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : output updated&#10;" timestamp="2025-03-30T18:28:30.906Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-30T19:05:58.405Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : output updated&#10;" timestamp="2025-03-30T19:07:39.236Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-30T19:07:45.156Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-30T19:08:07.079Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-30T19:08:19.887Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : input parameter aggregateParams2 added, inputs updated&#10;" timestamp="2025-03-30T19:12:28.197Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : output updated&#10;" timestamp="2025-03-30T19:12:36.412Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-30T19:12:54.299Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-30T19:22:08.089Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : output updated&#10;" timestamp="2025-03-30T19:23:42.157Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-30T19:26:30.440Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : output updated&#10;" timestamp="2025-03-30T19:26:36.879Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : input parameter aggregateParams2 updated, inputs updated&#10;" timestamp="2025-03-30T19:27:40.656Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : output updated&#10;" timestamp="2025-03-30T19:28:22.753Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-30T19:56:24.057Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-30T19:57:17.992Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : output updated&#10;" timestamp="2025-03-30T20:02:23.079Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-30T20:03:07.929Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : output updated&#10;" timestamp="2025-03-30T20:04:15.811Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-30T20:05:01.800Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-30T20:05:15.110Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-30T20:05:26.949Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-30T20:05:46.759Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-30T20:06:01.543Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-30T20:06:06.462Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-30T20:06:11.370Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-30T20:06:21.283Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-30T20:08:14.202Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : output updated&#10;" timestamp="2025-03-30T20:08:22.808Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-30T20:08:54.219Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;AggregateData : service added&#10;" timestamp="2025-03-30T21:58:57.372Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : AggregateData : service updated&#10;" timestamp="2025-03-30T22:00:44.960Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : AggregateData : input parameter returnedData added, inputs updated&#10;" timestamp="2025-03-30T22:01:11.043Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : AggregateData : service updated&#10;" timestamp="2025-03-30T22:02:21.694Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : AggregateData : output updated&#10;" timestamp="2025-03-30T22:03:28.290Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : AggregateData : service updated&#10;" timestamp="2025-03-30T22:04:14.073Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-30T22:05:26.003Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-30T22:07:46.103Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-30T22:08:11.507Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-30T22:23:44.358Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : input parameter query updated, inputs updated&#10;" timestamp="2025-03-30T22:24:34.046Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : input parameter query updated, inputs updated&#10;" timestamp="2025-03-30T22:26:58.258Z" user="Administrator"/><ConfigurationChange changeAction="FORCEEDIT" changeReason="ForceEdit" timestamp="2025-03-30T22:27:02.115Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-30T22:30:33.522Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-30T22:33:55.198Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-30T22:34:05.854Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-30T22:34:40.161Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-30T22:37:57.978Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-30T22:39:41.400Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-30T22:40:40.798Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : input parameter aggregateParams2 updated, inputs updated, output updated&#10;" timestamp="2025-03-30T23:42:38.445Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-30T23:42:49.261Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-30T23:46:05.492Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-30T23:46:44.947Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-30T23:52:35.590Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-31T00:07:18.405Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-31T00:08:09.515Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-31T00:08:52.742Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : output updated&#10;" timestamp="2025-03-31T00:09:02.361Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : output updated&#10;" timestamp="2025-03-31T00:09:09.624Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-31T00:10:14.655Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : output updated&#10;" timestamp="2025-03-31T00:10:25.898Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-31T00:10:47.557Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : output updated&#10;" timestamp="2025-03-31T00:10:56.306Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-31T00:11:26.259Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-31T00:15:28.438Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-31T00:17:20.692Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : input parameter aggregates added, inputs updated, input parameter columns added, inputs updated&#10;" timestamp="2025-03-31T00:24:21.821Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-31T00:27:05.414Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-31T00:28:04.394Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-31T00:29:23.239Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-31T00:30:59.180Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-31T00:31:33.615Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-31T00:31:46.226Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-31T00:32:34.218Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;AggregateData : service deleted&#10;" timestamp="2025-03-31T00:32:42.926Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-31T00:33:17.581Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-31T00:35:43.113Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-31T00:36:27.685Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-31T00:36:53.601Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-31T00:37:34.992Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-31T00:41:10.968Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : output updated&#10;" timestamp="2025-03-31T00:41:20.680Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-31T00:41:31.492Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-31T03:10:32.829Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : output updated&#10;" timestamp="2025-03-31T03:10:41.097Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-31T03:10:57.779Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : output updated&#10;" timestamp="2025-03-31T03:11:10.676Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-31T03:11:16.948Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-31T03:11:54.804Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-31T03:12:53.602Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-31T03:13:51.043Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : output updated&#10;" timestamp="2025-03-31T03:14:32.728Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-31T03:15:42.394Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : output updated&#10;" timestamp="2025-03-31T03:15:52.008Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-31T03:21:34.369Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-31T03:22:07.356Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : output updated&#10;" timestamp="2025-03-31T03:22:23.527Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : output updated&#10;" timestamp="2025-03-31T11:24:43.624Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-31T11:25:07.030Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : output updated&#10;" timestamp="2025-03-31T11:25:36.984Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-31T11:27:45.173Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-31T11:27:55.290Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-31T11:29:10.539Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : output updated&#10;" timestamp="2025-03-31T11:29:20.300Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-31T11:33:51.414Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : input parameter queriedData deleted, inputs updated, input parameter columns deleted, inputs updated, input parameter aggregates deleted, inputs updated, input parameter aggregateParams2 deleted, inputs updated&#10;" timestamp="2025-03-31T11:34:30.703Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-31T11:39:19.191Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessQuestion : service updated&#10;" timestamp="2025-03-31T11:41:20.082Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessQuestion : service updated&#10;" timestamp="2025-03-31T11:46:48.976Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessQuestion : service updated&#10;" timestamp="2025-03-31T11:53:09.604Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-31T11:55:44.243Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessQuestion : service updated&#10;" timestamp="2025-03-31T11:56:23.780Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-31T12:00:48.044Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessQuestion : service updated&#10;" timestamp="2025-03-31T12:01:17.696Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessQuestion : service updated&#10;" timestamp="2025-03-31T12:02:05.514Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessQuestion : service updated&#10;" timestamp="2025-03-31T12:02:34.144Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessQuestion : service updated&#10;" timestamp="2025-03-31T12:06:03.749Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessQuestion : service updated&#10;" timestamp="2025-03-31T12:07:16.542Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessQuestion : service updated&#10;" timestamp="2025-03-31T12:08:38.994Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-31T12:12:40.349Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : input parameter userQuestion updated, inputs updated, description updated&#10;" timestamp="2025-03-31T12:13:17.330Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetExampleQuestion : description updated&#10;" timestamp="2025-03-31T12:13:58.254Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : description updated&#10;" timestamp="2025-03-31T12:15:25.586Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;GetMetaData : service deleted&#10;GetLLMTextResponse : service added&#10;" timestamp="2025-03-31T12:16:34.274Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetLLMTextResponse : service updated&#10;GPT_Text_Response : service deleted&#10;" timestamp="2025-03-31T12:17:10.316Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetLLMTextResponse : description updated&#10;" timestamp="2025-03-31T12:18:21.937Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetLLMTextResponse : service updated&#10;" timestamp="2025-03-31T12:19:13.340Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetLLMTextResponse : service updated&#10;" timestamp="2025-03-31T12:20:12.698Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetLLMTextResponse : input parameter userQuestion deleted, inputs updated&#10;" timestamp="2025-03-31T12:20:45.804Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetLLMTextResponse : service updated&#10;" timestamp="2025-03-31T12:23:14.613Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessQuestion : input parameter userQuestion updated, inputs updated&#10;" timestamp="2025-03-31T12:26:02.123Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessQuestion : service updated&#10;" timestamp="2025-03-31T12:27:22.334Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessQuestion : service updated&#10;DELETE : service added&#10;" timestamp="2025-03-31T12:37:03.708Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : DELETE : service updated&#10;" timestamp="2025-03-31T12:41:08.925Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : service updated&#10;" timestamp="2025-03-31T12:42:12.743Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : output updated&#10;" timestamp="2025-03-31T12:44:28.580Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-31T12:46:05.519Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : output updated&#10;" timestamp="2025-03-31T12:46:15.184Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-31T12:48:32.883Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessQuestion : service updated&#10;" timestamp="2025-03-31T12:56:53.495Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-31T16:26:53.842Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-31T16:27:58.456Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-31T16:38:56.186Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessQuestion : service updated&#10;" timestamp="2025-03-31T16:39:33.182Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessQuestion : service updated&#10;" timestamp="2025-03-31T16:59:18.980Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessQuestion : service updated&#10;" timestamp="2025-03-31T17:04:19.374Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : service updated&#10;" timestamp="2025-03-31T17:07:09.416Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-31T17:07:34.105Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessQuestion : service updated&#10;" timestamp="2025-03-31T17:08:06.397Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : input parameter query updated, inputs updated&#10;" timestamp="2025-03-31T17:08:35.973Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : input parameter aggregateParams updated, inputs updated, input parameter query updated, inputs updated&#10;" timestamp="2025-03-31T17:09:14.762Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-31T17:15:00.134Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-31T17:16:49.522Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-31T17:18:00.927Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-31T17:20:04.516Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessQuestion : service updated&#10;" timestamp="2025-03-31T17:20:15.353Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessQuestion : service updated&#10;" timestamp="2025-03-31T17:21:47.193Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : DELETE : service updated&#10;DELETE2 : service added&#10;" timestamp="2025-03-31T17:22:47.764Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : DELETE2 : service updated&#10;" timestamp="2025-03-31T17:22:58.865Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : DELETE2 : service updated&#10;" timestamp="2025-03-31T17:23:07.071Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : DELETE2 : service updated&#10;" timestamp="2025-03-31T17:26:21.087Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetLLMTextResponse : input parameter top_p updated, inputs updated&#10;" timestamp="2025-03-31T18:16:42.856Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetLLMTextResponse : service updated&#10;" timestamp="2025-03-31T18:31:09.522Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetExampleQuestion : service updated&#10;" timestamp="2025-03-31T18:34:18.985Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-31T18:36:43.617Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetExampleQuestion : service updated&#10;" timestamp="2025-03-31T18:39:09.603Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetExampleQuestion : service updated&#10;" timestamp="2025-03-31T18:41:15.322Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-31T18:44:13.268Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetExampleQuestion : service updated&#10;" timestamp="2025-03-31T18:52:06.485Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessQuestion : service updated&#10;" timestamp="2025-03-31T18:53:38.682Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetExampleQuestion : service updated&#10;" timestamp="2025-03-31T19:01:22.213Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessQuestion : service updated&#10;" timestamp="2025-03-31T19:11:47.185Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetExampleQuestion : output updated&#10;" timestamp="2025-03-31T19:41:32.661Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetExampleQuestion : service updated&#10;" timestamp="2025-03-31T19:42:09.026Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetExampleQuestion : service updated&#10;" timestamp="2025-03-31T19:42:17.090Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetExampleQuestion : service updated&#10;" timestamp="2025-03-31T19:44:45.952Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetExampleQuestion : service updated&#10;" timestamp="2025-03-31T19:45:22.601Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetExampleQuestion : service updated&#10;" timestamp="2025-03-31T19:46:53.781Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetExampleQuestion : service updated&#10;" timestamp="2025-03-31T19:47:35.886Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetExampleQuestion : output updated&#10;" timestamp="2025-03-31T19:47:44.829Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetExampleQuestion : service updated&#10;" timestamp="2025-03-31T19:47:52.887Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetExampleQuestion : service updated&#10;" timestamp="2025-03-31T19:48:57.608Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetExampleQuestion : service updated&#10;" timestamp="2025-03-31T19:49:03.440Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetExampleQuestion : service updated&#10;" timestamp="2025-03-31T19:50:43.240Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetExampleQuestion : service updated&#10;" timestamp="2025-03-31T19:51:07.839Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetExampleQuestion : service updated&#10;" timestamp="2025-03-31T22:06:09.552Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-31T22:07:02.411Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetExampleQuestion : service updated&#10;" timestamp="2025-03-31T22:11:31.275Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetExampleQuestion : service updated&#10;" timestamp="2025-03-31T22:12:20.200Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-03-31T22:12:30.383Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetExampleQuestion : service updated&#10;" timestamp="2025-03-31T22:13:03.563Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetLLMTextResponse : service updated&#10;" timestamp="2025-03-31T22:13:38.950Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-03-31T22:14:52.732Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessQuestion : service updated&#10;" timestamp="2025-03-31T22:15:24.617Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : service updated&#10;" timestamp="2025-03-31T22:17:41.379Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessQuestion : service updated&#10;" timestamp="2025-03-31T22:18:31.340Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessQuestion : service updated&#10;" timestamp="2025-03-31T22:18:41.918Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessQuestion : service updated&#10;" timestamp="2025-03-31T22:19:13.559Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessQuestion : service updated&#10;" timestamp="2025-03-31T22:20:14.141Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetExampleQuestion : service updated&#10;" timestamp="2025-03-31T22:22:08.682Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : DELETE : service deleted&#10;DELETE2 : service deleted&#10;" timestamp="2025-03-31T22:22:52.248Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : service updated&#10;" timestamp="2025-04-01T19:27:28.773Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : QueryDataTable : service updated&#10;" timestamp="2025-04-01T19:28:37.573Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-04-01T19:33:25.542Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;QueryDataTable : service deleted&#10;" timestamp="2025-04-01T19:33:35.788Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetExampleQuestion : description updated&#10;" timestamp="2025-04-01T19:34:29.532Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessQuestion : description updated&#10;" timestamp="2025-04-01T19:38:15.600Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessQuestion : service updated&#10;CreatePrompt : service added&#10;" timestamp="2025-04-01T20:53:35.431Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-04-01T20:53:46.603Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GeneratePrompt : service updated&#10;" timestamp="2025-04-01T20:54:23.559Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessQuestion : service updated&#10;GeneratePrompt : service deleted&#10;" timestamp="2025-04-01T20:55:56.731Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : CreatePrompt : service updated&#10;" timestamp="2025-04-02T12:43:35.888Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetExampleQuestion : service updated&#10;" timestamp="2025-04-02T16:22:16.872Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetExampleQuestion : service updated&#10;" timestamp="2025-04-03T10:57:12.474Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessData : service updated&#10;" timestamp="2025-04-03T13:37:47.595Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessQuestion : service updated&#10;" timestamp="2025-04-03T17:46:34.951Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : ProcessQuestion : service updated&#10;" timestamp="2025-04-03T17:59:04.764Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="services : GetLLMTextResponse : service updated&#10;" timestamp="2025-04-03T18:00:55.441Z" user="Administrator"/></ConfigurationChanges></Thing></Things><Logs/><Authenticators/><ThingPackages/><NotificationDefinitions/><ApplicationKeys/><StateDefinitions/><ThingTemplates/><ExtensionPackages/><Organizations/><Menus/><ThingGroups/><Resources/><DataTags/><ThingShapes/><Subsystems/><NotificationContents/></Entities>
