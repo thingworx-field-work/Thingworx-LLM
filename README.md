@@ -20,8 +20,6 @@ Due to the inherent unpredictability of generative AI tools, users further ackno
 
 PTC disclaims liability for any losses or damages arising from the use of the demo application and this document. Users are responsible for outcomes from using the demo and document, and assume responsibility for complying with all relevant laws, including but not limited to data privacy, security, and the EU AI Act.
 
-***
-
 Your license to commercial versions of PTC products may not include all APIs needed to connect to AI tools and may require additional licensing.
 
 By downloading this software, the user acknowledges that it is unsupported, not reviewed for security purposes, and that the user assumes all risk for running it.
