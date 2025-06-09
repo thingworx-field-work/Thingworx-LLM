@@ -8,6 +8,7 @@ A specific context for using ThingWorx and LLMs is for Statistical Process Contr
 
 # Authors
 David Kessler
+
 Brad Cline
 
 # Disclaimer
